@@ -1,0 +1,58 @@
+body {
+  margin: 10px 20px;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 48px;
+  margin-top: 45px;
+  margin-bottom: 2px;
+}
+
+#page-text {
+  width: 100vw;
+  margin: auto 5%;
+}
+
+section {
+  display: inline-block;
+  vertical-align: top;
+  width: 20%;
+  margin: 5px;
+}
+
+p {
+  text-align: justify;
+  padding: 5px;
+  margin: auto;
+}
+
+p:nth-child(4n + 2) {
+  background-color: rgb(189, 184, 184);  
+  margin: 5px auto;
+}
+
+p:nth-child(3n + 3) {
+  border: 2px solid rgb(83, 83, 83);
+  margin: 5px auto;
+}
+
+p:nth-child(3n + 2) {
+  border: 3px dashed rgb(83, 83, 83);
+  margin: 5px auto;
+}
+
+h3 {
+  background-color: rgb(83, 83, 83);
+  padding: 5px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  margin: auto;
+}
+
+hr {
+  border: 2px solid rgb(83, 83, 83);
+}
