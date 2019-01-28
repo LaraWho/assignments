@@ -51,7 +51,7 @@
 
 // var str = "s".charCodeAt();
 // var num = 12;
-
+// console.log(str)
 // if(str > num) {
 //   console.log(`Yes: ${str} is bigger than ${num}`);
 // } else {
@@ -141,5 +141,58 @@
 
 ////GOLD
 
+// for(var i = 0; i <= 3; i++) {
+//   var subArr = Array(i).fill([0,0,0])
+// }
+// console.log("[[" + subArr[0] + "],")
+// console.log("[" + subArr[1] + "],")
+// console.log("[" + subArr[2] + "]]")
 
+// let arr = []
+// for(var i = 0; i < 3; i++) {
+//   arr.push([0,0,0])
+// }
+// console.log(arr)
 
+//// 2.Create an array that mimics a grid like the following using for loops:
+//// [[0, 0, 0], 
+//// [1, 1, 1], 
+//// [2, 2, 2]]
+
+// var arr1 = []
+// for(var i = 0; i < 3; i++) {
+//   arr1.push([i,i,i])
+// }
+// console.log({arr1})
+
+//// 3.Create an array that mimics a grid like the following using for loops:
+//// [[0, 1, 2], 
+//// [0, 1, 2], 
+//// [0, 1, 2]]
+
+// var arr2 = []
+// for(var i = 0; i <= 3; i++) {
+//   arr2 = Array(i).fill([0,1,2])
+// }
+// console.log(arr2)
+
+// var newArr = []
+// for(var i = 0; i < arr2.length; i++) {
+//   newArr += arr2[i].toString().replace(arr2[i], 'x')
+//   for(var j = 0; i < arr2[i].length; j++) {
+//     newArr += arr2[i].toString().replace(arr2[i], 'x')
+//   }
+// }
+// console.log(newArr)
+
+////Given a grid like the previous ones, write a for loop that would change every number to an x.
+
+// var newArr = []
+// arr.map((e) => {
+//   e.forEach(el => {
+//     newArr.push(Array(3).fill(el.toString().replace('0', 'x')))
+//   })
+// })
+// console.log("[[" + newArr[0] + "],")
+// console.log("[" + newArr[1] + "],")
+// console.log("[" + newArr[2] + "]]")
