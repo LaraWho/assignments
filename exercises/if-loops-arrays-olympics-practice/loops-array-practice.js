@@ -1,10 +1,12 @@
 var officeItems = ["stapler", "monitor", "computer", "desk", "lamp", "computer", "lamp", "stapler", "computer",  "computer"]
 
-var count = 0;
+var counter = 0;
 for(var i = 0; i < officeItems.length; i++) {
-  officeItems[i] === 'computer' ? count += 1 : null
+  if(officeItems[i] === 'computer') {
+    counter += 1 
+  }
 }
-// console.log(`There are ${count} computers in this array!`)
+console.log(`There are ${counter} computers in this array!`)
 
 var peopleWhoWantToSeeMadMaxFuryRoad = [
   {
@@ -47,7 +49,6 @@ peopleWhoWantToSeeMadMaxFuryRoad.forEach(e => {
 // Imagine you have a button that toggles a light on and off. Loop through the following array of numbers and toggle the button the numbers of times for each number. The array [2, 3, 2] would toggle the button 7 times.
 
 // The light is off to start with. Log to the console whether or not the light is on at the end.
-
 // Sample Arrays:
 
 var arr = [2, 5, 435, 4, 3] // "The light is on"

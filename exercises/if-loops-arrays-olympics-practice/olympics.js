@@ -18,7 +18,8 @@
 // }
 // console.log(person.age >= 18 ? `${person.name} is allowed to go to the movie` : `${person.name} is NOT allowed to go to the movie`);
 
-// console.log(person["name"].startsWith("B") ? `${person.name} is allowed to go to the movie` : `${person.name} is NOT allowed to go to the movie`);
+// var name = person.name.toLowerCase()
+// console.log(name.startsWith("b") ? `${person.name} is allowed to go to the movie` : `${person.name} is NOT allowed to go to the movie`);
 
 // console.log(person.age >= 18 && person.name.startsWith("B") ? `${person.name} is allowed to go to the movie` : `${person.name} is NOT allowed to go to the movie`);
 
