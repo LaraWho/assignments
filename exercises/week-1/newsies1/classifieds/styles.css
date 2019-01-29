@@ -29,6 +29,19 @@ p {
   margin: auto;
 }
 
+hr {
+  border: 2px solid rgb(83, 83, 83);
+}
+
+h3 {
+  background-color: rgb(83, 83, 83);
+  padding: 5px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  margin: auto;
+}
+
 p:nth-child(4n + 2) {
   background-color: rgb(189, 184, 184);  
   margin: 5px auto;
@@ -42,17 +55,4 @@ p:nth-child(3n + 3) {
 p:nth-child(3n + 2) {
   border: 3px dashed rgb(83, 83, 83);
   margin: 5px auto;
-}
-
-h3 {
-  background-color: rgb(83, 83, 83);
-  padding: 5px;
-  text-align: center;
-  font-weight: bold;
-  color: white;
-  margin: auto;
-}
-
-hr {
-  border: 2px solid rgb(83, 83, 83);
 }

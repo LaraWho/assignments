@@ -55,22 +55,28 @@ var arr = [2, 5, 435, 4, 3] // "The light is on"
 var arr1 = [1, 1, 1, 1, 3]   // "The light is on"
 var arr2 = [9, 3, 4, 2]      // "The light is off"
 
-var light = false;
-for(var i = 0; i < arr2.length; i++) {
-  if(arr[i] % 2 === 1) {
-    light = !light
-  } else {
-    light
+function toggleSwitch(arr) {
+  var light = false;
+  for(var i = 0; i < arr.length; i++) {
+    if(arr[i] % 2 === 1) {
+      light = !light
+    } else {
+      light
+    }
   }
+  console.log(light ? "The light is on" : "The light is off");
 }
-console.log(light ? "The light is on" : "The light is off");
+toggleSwitch(arr2);
 
 
-var num = arr1.reduce((acc, curr) => {
+function toggleSwitch2(arr) {
+var num = arr.reduce((acc, curr) => {
   return acc + curr
 })
-if(num % 2 === 1) {
-  console.log("The light is on")
-} else {
-  console.log("The light is off")
+  if(num % 2 === 1) {
+    console.log("The light is on")
+  } else {
+    console.log("The light is off")
+  }
 }
+toggleSwitch2(arr1);

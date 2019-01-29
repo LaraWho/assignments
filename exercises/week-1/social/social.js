@@ -2,7 +2,7 @@ var person = {
   name: 'Lara',
   age: 30,
   findBestFriend: function() {
-    console.log(`${person.name}'s best friend is ${person.friends[0].name}!`)
+    console.log(`${this.name}'s best friend is ${this.friends[0].name}!`)
   },
   friends: [
       {
@@ -128,3 +128,6 @@ var person = {
 }
 
 person.findBestFriend();
+
+const { name } = person.friends[0].friends[0].friends[0].friends[3]
+console.log(name)

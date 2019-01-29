@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box; 
+  font-size: 0px;
+}
+
+div {
+  height: 150px;
+  border: 8px solid white;
+  display: inline-block;
+}
+
+.first {
+  background-color: #F5C6D6;
+  display: block;
+}
+
+.second {
+  background-color: #EE2E84;
+  width: calc(100%/4);
+}
+
+.third {
+  background-color: #85CFD8;
+  width: calc(100%/2);
+}
+
+.fourth {
+  background-color: #8DC63F;
+  width: calc(100%/1.3333);
+}
+
+.fifth {
+  background-color: #E76E34;
+  width: calc(100%/4);
+}
+
+@media only screen and (max-width:  768px) {
+  div {
+    display: block;
+    width: 100% !important;
+  }
+}
