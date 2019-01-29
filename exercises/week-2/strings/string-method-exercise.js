@@ -14,13 +14,13 @@ function returnFirstHalf(str) {
 // console.log(returnFirstHalf("hello world"))
 
 function capitalizeAndLowercase1(str) {
-  var firstHalf = str.slice(0, Math.floor(str.length / 2))
+  var firstHalf = str.toUpperCase().slice(0, str.length / 2)
   var lastHalf = str.slice(Math.floor(str.length / 2))
 
-  return firstHalf.toUpperCase() + lastHalf
+  return firstHalf + lastHalf
   // return str.length % 2 === 1 ? firstHalf.toUpperCase() + lastHalf : firstHalf.toUpperCase() + lastHalf
 }
-// console.log(capitalizeAndLowercase1("hello world"))
+console.log(capitalizeAndLowercase1("hello world"))
 
 // Make a function that takes any string and capitalizes any character that follows a space.
 //capitalize("hey friends! practice practice practice!") // -> "Hey Friends! Practice Practice Practice!"

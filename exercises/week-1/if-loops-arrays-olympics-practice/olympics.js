@@ -142,9 +142,9 @@
 
 ////GOLD
 
-// for(var i = 0; i <= 3; i++) {
-//   var subArr = Array(i).fill([0,0,0])
-// }
+for(var i = 0; i <= 3; i++) {
+  var subArr = Array(i).fill([0,0,0])
+}
 // console.log("[[" + subArr[0] + "],")
 // console.log("[" + subArr[1] + "],")
 // console.log("[" + subArr[2] + "]]")

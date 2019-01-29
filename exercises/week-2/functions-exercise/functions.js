@@ -16,12 +16,12 @@
 // var resultOddOrEven = oddOrEven(21)
 // console.log( {resultOddOrEven} );
 
-// function comparingStrings(str) {
-//   var halfAString = str.substring(0, str.length / 2)
-//   return str.length <= 20 ? `${str}${str}` : `${halfAString}`
-// }
-// var resultComparingStrings = comparingStrings("qwertyuiopasdfghjklzxcvbnm");
-// console.log({resultComparingStrings});
+function comparingStrings(str) {
+  var halfAString = str.substring(0, str.length / 2)
+  return str.length <= 20 ? `${str}${str}` : `${halfAString}`
+}
+var resultComparingStrings = comparingStrings("qwertyuilnm");
+console.log({resultComparingStrings});
 
 
 // Write a function that accepts a number ‘n’ as a parameter. Then print the first ‘n’ Fibonacci numbers and return their sum.
@@ -43,8 +43,49 @@ function fibonacciSums(num) {
     return acc + curr
   })
 }
-var resultFibonacciSums = fibonacciSums(5)
-console.log({resultFibonacciSums}) 
+// var resultFibonacciSums = fibonacciSums(5)
+// console.log({resultFibonacciSums}) 
 
 //  Write a function that accepts a string as a parameter. Return the most frequently occurring letter in that string. ( White spaces count as a letter )
 
+// function mostFrequent(str) {
+//   var newArr = []
+//   var sorted = str.split('').sort()
+//   for(var i = 0; i < sorted.length; i++) {
+//     if(sorted[i] === sorted[i++]) {
+//       newArr.push(sorted[i++])
+//     } else {
+//       console.log(false)
+//     }
+//   }
+//   console.log(newArr)
+// }
+
+// function mostFrequent(str) {
+//   var newArr = []
+//   var sorted = str.split('').sort().forEach((el, i) => {
+//     el.sort((el, el+1) => {
+//       console.log(a, el+1)
+//     })
+//   })
+ 
+//   console.log(newArr)
+// }
+
+function mostFrequent(str) {
+    var counted = str.split('').reduce((str,letter) => {
+        if(letter in str) {
+          str[letter]++
+        } else {
+          str[letter] = 1
+        }
+        return str
+    }, {})
+    Object.entries(counted).forEach(([el, val]) => {
+      console.log('el',el)
+      console.log('val',val)
+    });
+  }
+
+var resultMostFrequent = mostFrequent("happpyx happpy happpy");
+console.log(resultMostFrequent);
