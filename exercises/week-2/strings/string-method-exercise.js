@@ -26,10 +26,10 @@ function capitalizeAndLowercase1(str) {
 //capitalize("hey friends! practice practice practice!") // -> "Hey Friends! Practice Practice Practice!"
 
 function capitalize(str) {
-  var splitStr = str.split(' ').forEach(el => {
-     return el.charAt(0).toUpperCase() + el.slice(1)
+  var newArr = []
+  str.split(' ').forEach(el => {
+     newArr.push(el[0].toUpperCase() + el.slice(1))
   })
-  console.log(splitStr)
-  return splitStr
+  return newArr.join(' ')
 }
 console.log('capitalize:', capitalize("hey friends! practice practice practice!"))
