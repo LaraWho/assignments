@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  font-size: 64px;
+  font-family: 'Fredericka the Great', cursive;
+  background-color: #FCF5C7;
+}
+
+/* div {
+  display: table-caption;
+} */
+
+.result {
+  font-size: 64px;
+  margin: 10px;
+  color: #A0CED9;
+  
+}
+
+.symbol {
+  text-align: center;
+  color: #FFC09F;
+}
+
+form {
+  padding: 10px;
+  border-radius: 20px;
+  margin-left: 10px;
+  /* display: flex;
+  justify-content: flex-start;
+  align-items: center; */
+}
+
+button {
+  margin: 10px;
+  width: 90px;
+  border-radius: 50%;
+  background-color: #FFC09F;
+  border: none;
+  color: #fff;
+  font-size: 64px;
+  cursor: pointer;
+  font-family: 'Fredericka the Great', cursive;
+}
+
+button:focus {
+  outline: 0;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+button:active {
+  border: 0;
+  background-color: rgba(255, 193, 159, 0.6);
+}
+
+input {
+  padding: 12px;
+  width: 120px;
+  border-radius: 50%;
+  border: 2.5px solid #A0CED9;
+  color: #A0CED9;
+  margin: 15px;
+  text-align: right;
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 60px;
+  cursor: pointer;
+}
+
+input:focus {
+  outline: 0;
+  border: 2.5px solid rgb(141, 190, 202);
+}

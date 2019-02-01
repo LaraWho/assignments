@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Fredericka+the+Great" rel="stylesheet">
+  <title>Calculator</title>
+</head>
+<body>
+  <div>
+    <form name="addition">
+      <input name="addNum1" type="number" required>
+
+          <span class="symbol">+</span>
+
+      <input name="addNum2" type="number" required>
+      <button id="addBtn">=</button>
+      <span class="result"></span>
+
+    </form>
+    <form name="subtraction">
+      <input name="sub1" type="number" required>
+
+        <span class="symbol">-</span>
+
+      <input name="sub2" type="number" required>
+      <button id="subBtn">=</button>
+      <span class="result"></span>
+
+    </form>
+    <form name="multiplication">
+      <input name="times1" type="number" required>
+
+        <span class="symbol">*</span>
+
+      <input name="times2" type="number" required>
+      <button id="timesBtn">=</button>
+      <span class="result"></span>
+    </form>
+    
+    <form name="division">
+        <input name="divide1" type="number" required>
+
+        <span class="symbol">/</span>
+
+        <input name="divide2" type="number" required>
+        <button id="divideBtn">=</button>
+        <span class="result"></span>
+      </form>
+  </div>
+
+  <script src="calc.js"></script>
+</body>
+</html>

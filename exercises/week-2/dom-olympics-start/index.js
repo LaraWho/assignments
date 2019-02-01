@@ -28,22 +28,22 @@ let messages1 = document.querySelectorAll("div.message.left");
 let messages2 = document.querySelectorAll("div.message.right");
 function changeTheme1(e) {
   if(e.target.value === 'theme-two') {
-  messages1.forEach((e) => {
-    e.style.color = '#fff';
-    e.style.backgroundColor = 'red'
+    messages1.forEach((e) => {
+        e.style.color = '#fff';
+        e.style.backgroundColor = '#da2323'
     })
     messages2.forEach((e) => {
-    e.style.color = '#fff';
-    e.style.backgroundColor = 'black'
+        e.style.color = '#fff';
+        e.style.backgroundColor = '#333'
     })
   } else if (e.target.value === 'theme-three') {
     messages1.forEach((e) => {
-          e.style.color = '#FF0000';
-          e.style.backgroundColor = '#E8DE0C'
-        })
-        messages2.forEach((e) => {
-          e.style.color = '#E8DE0C';
-          e.style.backgroundColor = '#0D1AE8'
+        e.style.color = '#FF0000';
+        e.style.backgroundColor = '#E8DE0C'
+      })
+    messages2.forEach((e) => {
+        e.style.color = '#E8DE0C';
+        e.style.backgroundColor = '#0D1AE8'
     })
   } else {
       messages1.forEach((e) => {
@@ -60,17 +60,36 @@ function changeTheme1(e) {
 document.getElementById("theme-drop-down").addEventListener('change', changeTheme1)
 
 //add message
-var form = document.form;
+var form = document.getElementById("add-message");
 
 function addMsg(e) {
   e.preventDefault()
-  var msg = form.newMsg.value
-  document.querySelectorAll("div.messages").innerHTML += msg
-  console.log(form.newMsg.value)
-  form.newMsg.value = ''
+  var newMessage = document.createElement("div")
+  var messageBox = document.getElementsByClassName("messages")[0];
+  newMessage.classList = "message right"
+  var inputBox = document.getElementById("message-input").value
 
+  //newMessage.appendChild does the same as newMessage.textContent
+  // newMessage.appendChild(document.createTextNode(document.getElementById("message-input").value))
+  newMessage.textContent = inputBox
+
+  newMessage.style.marginTop = "10px";
+  newMessage.style.marginBottom = "10px";
+  messageBox.insertBefore(newMessage, messageBox.childNodes[0])
+  // document.getElementsByClassName("messages")[0].appendChild(newMessage)
   
+
 }
 
-form.addEventListener('submit', addMsg);
+form.addEventListener('click', addMsg);
 
+// function newMessage(){
+//   // create new div
+//   var newMessage = document.createElement("div");
+//   // give it classes
+//   newMessage.classList = "message right";
+//   // give it text
+//   newMessage.textContent = document.getElementById("messageInput").value
+//   // append it to DOM (div.messages)
+//   document.getElementsByClassName("messages")[0].insertBefore(newMessage)
+// }
