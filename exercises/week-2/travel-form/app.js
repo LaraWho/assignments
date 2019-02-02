@@ -1,6 +1,5 @@
 var form = document.travel_form;
 
-
 function submitForm(e) {
   e.preventDefault()
   
