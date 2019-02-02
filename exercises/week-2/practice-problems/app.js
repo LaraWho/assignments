@@ -1,3 +1,32 @@
+//Forception - loops within loops
+var people = ["Jon", "Jacob", "Jingle", "Heimer", "Schmidt"]
+var alphabet = "abcdefghijklmnopqrstuvwxyz"
+
+forception = (people, alphabet) => {
+  let newArr1 = []
+  people.forEach((e) => {
+    newArr1.push(`${e}:`)
+    alphabet.split('').forEach((e2) => {
+      newArr1.push(e2.toUpperCase())
+    })
+  })
+  return newArr1
+}
+// console.log(forception(people, alphabet));
+
+forception1 = (people, alphabet) => {
+  let newArr2 = []
+  for(var i = 0; i < people.length; i++) {
+    newArr2.push(`${people[i]}:`)
+    for(var j = 0; j < alphabet.length; j++) {
+      newArr2.push(alphabet[j])
+    }
+  }
+  return newArr2
+}
+// console.log(forception1(people,alphabet));
+
+
 let reverseStr = function(str) {
   return str.split('').reverse().join('');
 }
@@ -49,31 +78,3 @@ combineArrays = (arr1, arr2) => {
   return newArr1
 }
 console.log(combineArrays( ["a", "b", "c"], [1, 2, 3]));
-
-//Forception - loops within loops
-var people = ["Jon", "Jacob", "Jingle", "Heimer", "Schmidt"]
-var alphabet = "abcdefghijklmnopqrstuvwxyz"
-
-forception = (people, alphabet) => {
-  let newArr1 = []
-  people.forEach((e) => {
-    newArr1.push(`${e}:`)
-    alphabet.split('').forEach((e2) => {
-      newArr1.push(e2.toUpperCase())
-    })
-  })
-  return newArr1
-}
-// console.log(forception(people, alphabet));
-
-forception1 = (people, alphabet) => {
-  let newArr2 = []
-  for(var i = 0; i < people.length; i++) {
-    newArr2.push(`${people[i]}:`)
-    for(var j = 0; j < alphabet.length; j++) {
-      newArr2.push(alphabet[j])
-    }
-  }
-  return newArr2
-}
-// console.log(forception1(people,alphabet));

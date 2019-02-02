@@ -5,35 +5,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Mukta|Slabo+27px" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="sweetalert2.min.css"> -->
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
   <title>Travel Form</title>
 </head>
 <body>
+
+<div id="main">
+
+  <h1>Traveller Information</h1>
+
 <form name="travel_form">
-  <p>First Name:</p><input name="first_name" type="text">
-  <p>Last Name:</p><input name="last_name" type="text">
-  <p>Age:</p><input name="age" type="number">
 
-  <h2>Gender:</h2>
-  <p>Female:</p><input name="female" type="radio">
-  <p>Male:</p><input name="male" type="radio">
-  <p>Rainbow:</p><input name="rainbow" type="radio">
+  <div class="section">
+    <p>First Name:</p><input name="first_name" type="text">
+    <p>Last Name:</p><input name="last_name" type="text">
+    <p>Age:</p><input id="age-box" name="age" type="number">
+  </div>
 
-  <h2>Dietary Restrictions:</h2>
-  <p>Vegetarian:</p><input name="veggie" type="checkbox" id="">
-  <p>Vegan:</p><input name="vegan" type="checkbox" id="">
-  <p>Lactose Free:</p><input name="lactose" type="checkbox" id="">
-  <p>Gluten Free:</p><input name="gluten" type="checkbox" id="">
+  <div class="section">
+    <h2>Gender:</h2>
+    <p>Female:</p><input name="gender" value="Female" type="radio">
+    <p>Male:</p><input name="gender" value="Male" type="radio">
+    <p>Rainbow:</p><input name="gender" value="Rainbow" type="radio">
+  </div>
 
-  <label for="Destination">Destination</label>
-  <select name="Destination" id="">
-    <option value="Italy">Italy</option>
-    <option value="New Zealand">New Zealand</option>
-    <option value="Iceland">Iceland</option>
-    <option value="Canada">Canada</option>
-  </select>
-  <button>submit</button>
+  <div class="section">
+    <h2>Dietary Restrictions:</h2>
+    <p>Vegetarian:</p><input value="Vegetarian" name="food" type="checkbox" id="">
+    <p>Vegan:</p><input value="Vegan" name="food" type="checkbox" id="">
+    <p>Lactose Free:</p><input value="Lactose Free" name="food" type="checkbox" id="">
+    <p>Gluten Free:</p><input value="Gluten Free" name="food" type="checkbox" id="">
+  </div>
+
+  <div class="section">
+    <h2>Destination:</h2>
+    <select name="Destination" id="">
+      <option value="Italy">Italy</option>
+      <option value="New Zealand">New Zealand</option>
+      <option value="Iceland">Iceland</option>
+      <option value="Canada">Canada</option>
+    </select>
+  </div>
+
+  <div class="section">
+    <button id="submit">submit</button>
+  </div>
 </form>
-
+</div>
 
   <script src="app.js"></script>
 </body>

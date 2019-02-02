@@ -1,0 +1,84 @@
+body {
+  font-size: 18px;
+  font-family: 'Mukta', sans-serif;
+  background-image: url("sky.png");
+}
+
+h1 {
+  font-family: 'Slabo 27px', serif;
+  font-size: 48px;
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.swal-button {
+  background-color: #2d5b71 !important;
+}
+
+button:hover {
+  background-color: rgba(45, 91, 113, 0.8) !important;
+}
+
+button:focus {
+  outline: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+input {
+  font-size: 18px;
+  margin-right: 10px;
+  background-color: white;
+  border-radius: 20px;
+  padding: 10px 16px;
+  border: 2px solid #2d5b71;
+
+}
+
+#age-box {
+  width: 60px;
+}
+
+input:focus {
+  outline: 0;
+  background-color: rgba(45, 91, 113, 0.1);
+}
+input:active {
+  background-color: rgba(45, 91, 113, 0.1);
+
+}
+
+select {
+  font-size: 18px;
+}
+
+p, h2, select, input {
+  margin-left: 5px;
+}
+
+h2 {
+  margin-right: 10px;
+}
+
+/* .myAlert {
+} */
+
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#submit {
+  margin-top: 20px;
+  padding: 10px 16px;
+  border-radius: 20px;
+  border: 1px solid #2d5b71;
+  background-color: #2d5b71;
+  color: white;
+  font-size: 18px;
+}
