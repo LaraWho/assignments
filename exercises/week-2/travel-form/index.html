@@ -8,21 +8,21 @@
   <title>Travel Form</title>
 </head>
 <body>
-<form name="">
-  <p>First Name:</p><input type="text">
-  <p>Last Name:</p><input type="text">
-  <p>Phone Number:</p><input type="tel">
+<form name="travel_form">
+  <p>First Name:</p><input name="first_name" type="text">
+  <p>Last Name:</p><input name="last_name" type="text">
+  <p>Age:</p><input name="age" type="number">
 
   <h2>Gender:</h2>
-  <p>Female:</p><input type="radio">
-  <p>Male:</p><input type="radio">
-  <p>Rainbow:</p><input type="radio">
+  <p>Female:</p><input name="female" type="radio">
+  <p>Male:</p><input name="male" type="radio">
+  <p>Rainbow:</p><input name="rainbow" type="radio">
 
   <h2>Dietary Restrictions:</h2>
-  <p>Vegetarian:</p><input type="checkbox" name="" id="">
-  <p>Vegan:</p><input type="checkbox" name="" id="">
-  <p>Lactose Free:</p><input type="checkbox" name="" id="">
-  <p>Gluten Free:</p><input type="checkbox" name="" id="">
+  <p>Vegetarian:</p><input name="veggie" type="checkbox" id="">
+  <p>Vegan:</p><input name="vegan" type="checkbox" id="">
+  <p>Lactose Free:</p><input name="lactose" type="checkbox" id="">
+  <p>Gluten Free:</p><input name="gluten" type="checkbox" id="">
 
   <label for="Destination">Destination</label>
   <select name="Destination" id="">
@@ -31,6 +31,7 @@
     <option value="Iceland">Iceland</option>
     <option value="Canada">Canada</option>
   </select>
+  <button>submit</button>
 </form>
 
 
