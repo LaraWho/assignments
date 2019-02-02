@@ -2,6 +2,8 @@ body {
   font-size: 18px;
   font-family: 'Mukta', sans-serif;
   background-image: url("sky.png");
+  background-position: center;
+  background-size: cover;
 }
 
 h1 {
@@ -14,6 +16,11 @@ h1 {
 
 .swal-button {
   background-color: #2d5b71 !important;
+}
+
+
+.myAlert {
+  font-family: 'Mukta', sans-serif;
 }
 
 button:hover {
@@ -62,10 +69,6 @@ p, h2, select, input {
 h2 {
   margin-right: 10px;
 }
-
-/* .myAlert {
-} */
-
 
 .section {
   display: flex;
