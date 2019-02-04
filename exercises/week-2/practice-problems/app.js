@@ -47,34 +47,26 @@ console.log('isEven:',isEven(12));
 console.log('isEven:',isEven(7));
 
 averageArray = arr => {
-  return arr.reduce((total, num) => {
-    return (total + num) / arr.length
-  })
+  return arr.reduce((acc, curr) => {
+    return acc + curr
+  }) / arr.length
 }
 console.log('averageArr;', averageArray([1, 2, 3]));
 console.log('averageArr;', averageArray([5, -10, 10, 20]));
 
-// combineArrays = (arr1, arr2) => {
-//   let newArr = []
-//   arr1.forEach((e) => {
-//     newArr.push(e)
-//     arr2.map((e2,i2) => {
-//       newArr.push(e2)
-//     })
-//   })
-//   console.log(newArr)
-//   return newArr
-// }
-
 combineArrays = (arr1, arr2) => {
-  let newArr1 = []
-  for(var i = 0; i < arr1.length; i++) {
-    newArr1.push(arr1[i])
-    for(var j = 0; j < arr2.length; j++) {
-      console.log(arr2[j])
-      newArr1.push(arr2[j])
-    }
-  }
-  return newArr1
+  let newArr = []
+  arr1.forEach((e) => {
+    newArr.push(e, arr2[0]++)
+  })
+  return newArr
 }
+
+// combineArrays = (arr1, arr2) => {
+//   let newArr1 = []
+//   for(var i = 0; i < arr1.length; i++) {
+//     newArr1.push(arr1[i], arr2[0]++)
+//   }
+//   return newArr1
+// }
 console.log(combineArrays( ["a", "b", "c"], [1, 2, 3]));
