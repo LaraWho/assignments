@@ -1,0 +1,373 @@
+body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+img {
+  margin-top: 20px;
+  width: 252px;
+}
+
+#france {
+  margin-top: 20px;
+  position: relative;
+  width: 250px;
+  height: 150px;
+  background-color: white;
+  border: 1px solid #333;
+}
+
+#france-blue {
+  position: absolute;
+  height: 150px;
+  width: calc(100% / 3);
+  background-color: #0A2295;
+}
+
+#france-red {
+  position: absolute;
+  height: 150px;
+  width: calc(100% / 3);
+  background-color: #ED2839;
+  right: 0;
+}
+
+#germany {
+  margin-top: 20px;
+  position: relative;
+  width: 250px;
+  height: 150px;
+  background-color: #DD0800;
+  border: 1px solid #333;
+}
+
+#germany-black{
+  position: absolute;
+  width: 100%;
+  height: calc(100% / 3);
+  background-color: black;
+  top: 0;
+}
+
+#germany-yellow {
+  position: absolute;
+  width: 100%;
+  height: calc(100% / 3);
+  background-color: #FACE01;
+  bottom: 0;
+}
+
+#mada {
+  margin-top: 20px;
+  position: relative;
+  width: 250px;
+  height: 150px;
+  background-color: white;
+  border: 1px solid #333;
+}
+
+#mada-red{
+  position: absolute;
+  width: calc(100% / 1.5);
+  height: calc(100% / 2);
+  background-color: #F23D32;
+  right: 0;
+  top: 0;
+}
+
+#mada-green {
+  position: absolute;
+  width: calc(100% / 1.5);  
+  height: calc(100% / 2);
+  background-color: #2B7E3A;
+  right: 0;
+  bottom: 0;
+}
+
+#swiss {
+  margin-top: 20px;
+  position: relative;
+  width: 250px;
+  height: 150px;
+  background-color: #F10A04;
+  border: 1px solid #333;
+}
+
+#swiss1{
+  position: absolute;
+  height: 38px;
+  width: 100px;
+  background-color: #fff;
+  top: 38%;
+  left: 29%;
+}
+
+#swiss2 {
+  position: absolute;
+    width: 38px;
+    height: 100px;
+    background-color: #fff;
+    bottom: 16%;
+    left: 42%;
+}
+
+#swede {
+  margin-top: 20px;
+  position: relative;
+  width: 250px;
+  height: 150px;
+  background-color: #256AA7;
+  border: 1px solid #333;
+}
+
+#swede1{
+  position: absolute;
+  height: 35px;
+  width: 100%;
+  background-color: #F9CC03;
+  top: 60px;
+}
+
+#swede2 {
+  position: absolute;
+    width: 35px;
+    height: 100%;
+    background-color: #F9CC03;
+    left: calc(100% / 3.5);
+}
+
+#gambia {
+  margin-top: 20px;
+  position: relative;
+  width: 250px;
+  height: 150px;
+  background-color: #fff;
+  border: 1px solid #333;
+}
+
+#gambia-red{
+  position: absolute;
+  height: calc(100% / 3);
+  width: 100%;
+  background-color: #CE1126;
+  top: 0;
+}
+
+#gambia-blue {
+  position: absolute;
+  height: calc(100% / 4.5);
+  width: 100%;
+  background-color: #0C1C8C;
+  top: 58px;
+}
+
+#gambia-green {
+  position: absolute;
+  height: calc(100% / 3);
+  width: 100%;
+  background-color: #3A7728;
+  bottom: 0;
+}
+
+#tonga {
+  margin-top: 20px;
+  position: relative;
+  width: 250px;
+  height: 150px;
+  background-color: #C10600;
+  border: 1px solid #333;
+}
+
+#tonga-square{
+  position: absolute;
+  height: calc(100% / 2);
+  width: calc(100% / 3);
+  background-color: #FFFFFF;
+  top: 0;
+  left: 0;
+}
+
+#tonga-strip1 {
+  position: absolute;
+  height: 45px;
+  width: 15px;
+  background-color: #C10600;
+  top: 15px;
+  left: 35px;
+}
+
+#tonga-strip2 {
+  position: absolute;
+  height: 15px;
+  width: 45px;
+  background-color: #C10600;
+  top: 30px;
+  left: 20px;
+}
+
+#japan {
+  margin-top: 20px;
+  position: relative;
+  width: 250px;
+  height: 150px;
+  background-color: #fff;
+  border: 1px solid #333;
+}
+
+#japan-circle {
+  position: absolute;
+  height: 85px;
+  width: 85px;
+  border-radius: 50%;
+  background-color: #BC042D;
+  top: 30px;
+  left: 85px;
+}
+
+#greece {
+  margin-top: 20px;
+  position: relative;
+  width: 250px;
+  height: 135px;
+  background-color: #FFFFFF;
+  border: 1px solid #333;
+}
+
+#greece-square {
+  position: absolute;
+  height: calc(100% / 1.8);
+  width: calc(100% / 3);
+  background-color: #205EAF;
+  top: 0;
+  left: 0;
+}
+
+#greece-square-strip1 {
+  position: absolute;
+  height: 15px;
+  width: calc(100% / 3);
+  background-color: #fff;
+  top: 30px;
+}
+
+#greece-square-strip2 {
+  position: absolute;
+  height: calc(100% / 1.8);
+  width: 15px;
+  background-color: #fff;
+  top: 0;
+  left: 35px;
+}
+
+#greece-strip1 {
+  position: absolute;
+  height: 15px;
+  width: calc(100% / 1.5);
+  background-color: #205EAF;
+  top: 0px;
+  right: 0;
+}
+
+#greece-strip2 {
+  position: absolute;
+  height: 15px;
+  width: calc(100% / 1.5);
+  background-color: #205EAF;
+  top: 30px;
+  right: 0;
+}
+
+#greece-strip3 {
+  position: absolute;
+  height: 15px;
+  width: calc(100% / 1.5);
+  background-color: #205EAF;
+  top: 60px;
+  right: 0;
+}
+
+#greece-strip4 {
+  position: absolute;
+  height: 15px;
+  width: 100%;
+  background-color: #205EAF;
+  top: 90px;
+  right: 0;
+
+}
+
+#greece-strip5 {
+  position: absolute;
+  height: 15px;
+  width: 100%;
+  background-color: #205EAF;
+  top: 120px;
+  right: 0;
+}
+
+#maldives {
+  margin-top: 20px;
+  position: relative;
+  width: 250px;
+  height: 150px;
+  background-color: #D21034;
+  border: 1px solid #333;
+}
+
+#maldives-square {
+  position: absolute;
+  width: calc(100% / 2);
+  height: calc(100% / 2);
+  background-color: #2B7E3A;
+  top: calc(100% / 4);
+  left: calc(100% / 4);
+}
+
+#maldives-crescent {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 8px 8px 0 0 #fff;
+  transform: rotate(135deg);
+  left: 120px;
+  top: 50px;
+}
+
+#niger {
+  margin-top: 20px;
+  position: relative;
+  width: 250px;
+  height: 150px;
+  background-color: #fff;
+  border: 1px solid #333;
+}
+
+#niger-circle {
+  position: absolute;
+  height: 42px;
+  width: 42px;
+  border-radius: 50%;
+  background-color: #E05207;
+  top: calc(100% / 2.8);
+  left: calc(100% / 2.35);
+}
+
+#niger-strip1 {
+  position: absolute;
+  height: calc(100% / 3);
+  width: 100%;
+  background-color: #E05207;
+  top: 0;
+}
+
+#niger-strip2 {
+  position: absolute;
+  height: calc(100% / 3);
+  width: 100%;
+  background-color: #3FAF2B;
+  bottom: 0;
+}

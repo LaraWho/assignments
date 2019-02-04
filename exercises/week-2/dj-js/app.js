@@ -11,7 +11,6 @@ square.addEventListener('mouseenter', () => {
 square.addEventListener('mousedown', () => {
   //red
   square.style.backgroundColor = 'rgb(236, 42, 28)';
-  
 })
 
 square.addEventListener('mouseup', () => {
@@ -39,7 +38,6 @@ square.addEventListener('pointerleave', () => {
   square.style.backgroundColor = 'rgb(236, 28, 152)';
   darude.pause(); 
 })
-
 
 // playAudio = () => { 
   // darude.currentTime = '30';
