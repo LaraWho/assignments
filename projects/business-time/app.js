@@ -7,7 +7,7 @@ function submitForm(e) {
   swal({
     title: `Thank you ${username.value}!`,
     text: `I hope your plant doesn't die anytime soon!`,
-    timer: 800,
+    timer: 1000,
     buttons: false
   })
 
