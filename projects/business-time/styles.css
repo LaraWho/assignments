@@ -1,10 +1,10 @@
 * {
   color: #1E1D19;
+  margin: 0;
 }
 
 body {
   background-color: #F5F4F7;
-  /* color: #333; */
 }
 
 .whole-page {
@@ -61,7 +61,7 @@ body {
   background-color: #F5F4F7;
   color: #333;
 }
-
+/* 
 .swal-button {
   background-color: #6D874C;
 }
@@ -69,7 +69,7 @@ body {
 .myAlert button:hover {
   background-color: #6D874C;
   opacity: 0.8;
-}
+} */
 
 .swal-title {
   font-family: 'Source Sans Pro', sans-serif;
@@ -164,9 +164,9 @@ nav > ul > li {
 
 .heading > h3 {
   font-family: 'Source Sans Pro', sans-serif;
-  margin-top: 18px;
+  margin-top: 10px;
   font-size: 22px;
-  width: 60%;
+  width: 80%;
   line-height: 26px;
 }
 
