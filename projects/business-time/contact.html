@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="reset.css">
   <link href="https://fonts.googleapis.com/css?family=Righteous|Source+Sans+Pro:400,600" rel="stylesheet">
   <link rel="shortcut icon" type="image/png" href="ladybird.png"/>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <title>plant hospital</title>
 </head>
 <body>
@@ -20,12 +21,24 @@
     </ul>
   </nav>
 
-  <div class="main">
+  <section class="main">
     <header class="heading">
-      <h1 class="title">plant hospital</h1>
-      <h3><b>ask for help below</b></h3>
+      <h1 class="title">contact me</h1>
+      <h3><b>ask for help below</b> <br> your plants would thank you if they could</h3>
     </header>
-  </div>
+
+      <div class="contact-box" id="contactForm">
+        <h4>email address</h4>
+        <input class="contact" type="text" name="email" id="email">
+        <h4>name</h4>
+        <input class="contact" type="text" name="username" id="username">
+        <h4>message</h4>
+        <textarea class="contact" name="message" id="message" cols="20" rows="5" ></textarea>
+        <button id="button">send</button>
+      </div>
+
+      <script src="app.js"></script>
+  </section>
 </div>
   
 </body>

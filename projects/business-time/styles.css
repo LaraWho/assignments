@@ -1,7 +1,40 @@
+* {
+  color: #1E1D19;
+}
+
 body {
   background-color: #F5F4F7;
-  color: #333;
+  /* color: #333; */
+}
 
+.swal-modal {
+  background-color: #F5F4F7;
+  color: #333;
+}
+
+.swal-button {
+  background-color: #6D874C;
+}
+
+.myAlert button:hover {
+  background-color: #6D874C;
+  opacity: 0.8;
+}
+
+.swal-title {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.swal-text {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.image-text {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  width: 80%;
+  text-align: center;
 }
 
 .main > p {
@@ -26,13 +59,14 @@ body {
 }
 
 #quote {
-  background-color: rgba(209, 227, 206, 0.5);
+  /* background-color: rgba(228, 238, 230, 0.5); */
+  background-color: rgba(209, 227, 206, 0.8);
   padding: 20px;
   width: 75%;
   font-size: 22px;
   text-align: center;
   border-radius: 20px;
-  margin: 30px 20px;
+  margin: 15px 0 10px 0;
 }
 
 a {
@@ -90,9 +124,98 @@ nav > ul > li {
   margin-top: 18px;
   font-size: 22px;
   width: 60%;
+  line-height: 26px;
 }
 
-@media (min-width: 385px) {
+.contact-box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
+  margin-top: 30px;
+  width: 80%;
+  /* background-color: rgba(228, 238, 230, 0.8); */
+  background-color: rgba(209, 227, 206, 0.8);
+  padding-bottom: 20px;
+  border-radius: 20px;
+
+}
+
+.contact-box > h4 {
+  font-size: 24px;
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 10px 0 5px 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+.contact {
+  width: 80%;
+  border-radius: 20px;
+  border: 2px solid #d1e3ce;
+  padding: 8px;
+  font-size: 20px;
+}
+
+input:focus {
+  outline: 0;
+  border: 2px solid #6D874C;
+}
+
+textarea:focus {
+  outline: 0;
+  border: 2px solid #6D874C;
+}
+
+button:focus {
+  outline: 0;
+}
+
+button {
+  width: 85%;
+  background-color: #6D874C;
+  color: #F5F4F7;
+  border-radius: 20px;
+  border: 2px solid #6D874C;
+  padding: 8px;
+  font-size: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.home-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px auto;
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: rgba(209, 227, 206, 0.8);
+  border-radius: 20px;
+  width: 80%;
+  padding: 10px;
+  padding-bottom: 20px;
+}
+
+.home-content > h2 {
+  width: 90%;
+  text-align: center;
+  font-size: 20px;
+  line-height: 22px;
+}
+
+.home-content > p {
+  text-align: center;
+  font-size: 18px;
+  line-height: 20px;
+  width: 90%;
+}
+
+@media (min-width: 680px) {
   .heading > h1 {
     font-size: 64px;
     margin-top: 40px;
@@ -105,7 +228,56 @@ nav > ul > li {
     width: 80%;
   }
 
+  #quote {
+    margin: 30px 20px;
+  }
+
   .main > h1 {
     font-size: 32px;
+    text-align: center;
   }
+  .main > p {
+    text-align: center;
+  }
+
+  .contact-box > h4 {
+    font-size: 26px;
+    margin: 15px 0 5px 0;
+  }
+  .contact-box {
+    width: 60%;
+    margin-top: 40px;
+  }
+  .contact {
+    width: 80%;
+  }
+
+  button {
+    width: 83%;
+    font-size: 26px;
+  }
+
+  .home-content {
+    width: 60%;
+    margin-top: 40px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+  
+  .home-content > h2 {
+    width: 90%;
+    text-align: center;
+    font-size: 32px;
+    line-height: 36px;
+  }
+  
+  .home-content > p {
+    text-align: center;
+    font-size: 28px;
+    line-height: 32px;
+    width: 90%;
+    margin-top: 20px;
+  }
+
+
 }
