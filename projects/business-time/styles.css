@@ -121,7 +121,8 @@ body {
 
 a {
   text-decoration: none;
-  color: #333;
+  /* color: #333; */
+  color: #6D874C;
 }
 
 li:hover {
@@ -181,7 +182,7 @@ nav > ul > li {
   background-color: rgba(209, 227, 206, 0.8);
   padding-bottom: 20px;
   border-radius: 20px;
-
+  box-shadow: 2px 2px 2px #6D874C;
 }
 
 .contact-box > h4 {

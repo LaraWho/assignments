@@ -10,7 +10,6 @@ function submitForm(e) {
     timer: 1000,
     buttons: false
   })
-
 }
 
 btn.addEventListener('click', submitForm);
