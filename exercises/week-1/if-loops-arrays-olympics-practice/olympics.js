@@ -185,17 +185,23 @@ function createThirdMatrix() {
 }
 console.log(createThirdMatrix()) 
 
-// function changeMatrix(arr) {
-//   var newArr = []
-//   for(var i = 0; i < arr.length; i++) {
-//     newArr += arr[i].toString().replace(arr[i], 'x')
-//     for(var j = 0; i < arr[i].length; j++) {
-//       newArr += arr[i].toString().replace(arr[i], 'x')
-//     }
-//   }
-//   return newArr
-// }
-// console.log(changeMatrix([ [ 0, 0, 0 ], [ 0, 0, 0 ], [ 0, 0, 0 ] ]));
+function changeMatrix(arr) {
+  var newArr = []
+  for(var i = 0; i < arr.length; i++) {
+    newArr += arr[i].toString().replace(arr[i], 'x')
+    for(var j = 0; i < arr[i].length; j++) {
+      newArr += arr[i].toString().replace(arr[i], 'x')
+    }
+  }
+  return newArr
+}
+console.log(changeMatrix([ [ 0, 0, 0 ], [ 0, 0, 0 ], [ 0, 0, 0 ] ]));
+
+// var newMatrix = matrix.map(numbers => {
+//   return numbers.map(number => {
+//     return 0
+//   })
+// })
 
 ////Given a grid like the previous ones, write a for loop that would change every number to an x.
 function changeMatrix(arr) {
@@ -208,4 +214,4 @@ arr.map((e) => {
 // console.log("[[" + newArr[0] + "],")
 // console.log("[" + newArr[1] + "],")
 // console.log("[" + newArr[2] + "]]")
-console.table(changeMatrix([ [ 0, 0, 3 ], [ 0, 2, 0 ], [ 4, 0, 0 ] ]));
+// console.table(changeMatrix([ [ 0, 0, 3 ], [ 0, 2, 0 ], [ 4, 0, 0 ] ]));
