@@ -28,12 +28,12 @@ var attacks = {
 }
 
 var enemies = [
-  davros = new Enemy('Davros', attacks.lowAttackPoints, 1000, 'Dalek Gunstick'),
-  weepingAngel = new Enemy('Weeping Angel', attacks.lowAttackPoints, 1000, 'Stone Angel Hand'),
-  missy = new Enemy('Missy', attacks.medAttackPoints, 1000, 'Sonic Umbrella'),
-  master = new Enemy('The Master', attacks.highAttackPoints, 1000, 'Insanity'),
-  vashtaNerada = new Enemy('Vashta Nerada', attacks.highAttackPoints, 1500, 'Fear of the Dark'),
-  slitheen = new Enemy('Blon Fel Fotch Pasameer-Day Slitheen', attacks.lowAttackPoints, 5000, 'Huge claw and Toxic Gas')
+  davros = new Enemy('Davros', attacks.lowAttackPoints, 175, 'Dalek Gunstick'),
+  weepingAngel = new Enemy('Weeping Angel', attacks.lowAttackPoints, 100, 'Stone Angel Hand'),
+  missy = new Enemy('Missy', attacks.medAttackPoints, 100, 'Sonic Umbrella'),
+  master = new Enemy('The Master', attacks.highAttackPoints, 150, 'Insanity'),
+  vashtaNerada = new Enemy('Vashta Nerada', attacks.highAttackPoints, 150, 'Fear of the Dark'),
+  slitheen = new Enemy('Blon Fel Fotch Pasameer-Day Slitheen', attacks.lowAttackPoints, 50, 'Huge claw and Toxic Gas')
 ]
 
 //STORY STARTS
@@ -137,16 +137,16 @@ function fiiight(alien) {
   while(alien.health > 0) {
 
     var randomNum = Math.floor(Math.random() * 5)
+    var attack = ask.keyIn(`\n ATTACK![y] - OR - RUN AWAY![n]`, {limit: 'yn'})
+      if(attack === 'y') {
 
-    if(randomNum === 2) {
-      console.log(`\n Woops! You missed! \n`)  
-  
-    } else if(randomNum === 3) {
-        console.log(`\n That frying pan came in useful! \n Who knew Teflon also repels alien attacks?! \n`)
+        if(randomNum === 2) {
+          console.log(`\n Woops! You missed! \n`)  
+      
+        } else if(randomNum === 3) {
+            console.log(`\n That frying pan came in useful! \n Who knew Teflon also repels alien attacks?! \n`)
 
-    } else {
-      var attack = ask.keyIn(`\n ATTACK![y] - OR - RUN AWAY![n]`, {limit: 'yn'})
-        if(attack === 'y') {
+        } else {
           player.health -= alien.attack
           alien.health -=player.attack
     
@@ -159,24 +159,25 @@ function fiiight(alien) {
     
             } else {
               console.log(`\n You managed to take ${player.attack} points from ${alien.name}, who now has ${alien.health} health points left`)
+            } 
+            
+              if(player.health <= 0) {
+                console.log(` \n Good job for failing The Doctor by dying. \n GAME OVER!`)
+      
+            } else {
+              console.log(`\n That was rough, you took ${alien.attack} damage. Your health is now ${player.health} \n Keep an eye on that \n `)
             }
-        } else {
+  }
+        } else if(attack === 'n') {
           var escapeOdds = Math.floor(Math.random() * 2)          
           if(escapeOdds === 1) {
             run()
           } else {
             player.health -= 20
             console.log(`\n You didn't escape fast enough so you lost 20 health points. Boo.`)
+            run()
         }
     }
-  }
-
-      if(player.health <= 0) {
-        console.log(` \n Good job for failing The Doctor by dying. \n GAME OVER!`)
-
-      } else {
-        console.log(`\n That was rough, you took ${alien.attack} damage. Your health is now ${player.health} \n Keep an eye on that \n `)
-      }
     
   }
   if(!enemies[0]) {
