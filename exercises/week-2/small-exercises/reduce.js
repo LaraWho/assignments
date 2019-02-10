@@ -15,13 +15,20 @@ function stringConcat(arr) {
 console.log(stringConcat([1,2,3])); // "123"
 
 // Turn an array of voter objects into a count of how many people voted
+// function totalVotes(arr) {
+//     let count = 0;
+//     arr.filter(el => {
+//       return el.voted ? count++ : null
+//     })
+//     return count
+// }
+
 function totalVotes(arr) {
-    let count = 0;
-    arr.filter(el => {
-      return el.voted ? count++ : null
-    })
-    return count
+ return arr.reduce((acc, voter) => {
+    return voter.voted ? acc + 1 : acc + 0
+  }, 0)
 }
+
 var voters = [
     {name:'Bob' , age: 30, voted: true},
     {name:'Jake' , age: 32, voted: true},
@@ -36,7 +43,7 @@ var voters = [
     {name: 'Jeff', age: 30, voted: true},
     {name: 'Zack', age: 19, voted: false}
 ];
-console.log(totalVotes(voters)); // 7
+console.log('totalVotes:',totalVotes(voters)); // 7
 
 // Given an array of all your wishlist items, figure out how much it would cost to just buy everything at once
 function shoppingSpree(arr) {
@@ -85,7 +92,7 @@ var voters = [
 ];
 
 // function voterResults(arr) {
-
+//   return arr.reduce
 // }
 
 // console.log(voterResults(voters)); // Returned value shown below:

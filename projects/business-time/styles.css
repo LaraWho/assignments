@@ -1,5 +1,5 @@
 * {
-  color: #1E1D19;
+  color: #3A4828;
   margin: 0;
 }
 
@@ -126,7 +126,8 @@ a {
 }
 
 li:hover {
-  opacity: 0.8;
+  opacity: 0.6;
+  transition: all 0.5s ease;
 }
 
 nav > ul {
@@ -204,11 +205,13 @@ nav > ul > li {
 input:focus {
   outline: 0;
   border: 2px solid #6D874C;
+  transition: all 0.8s ease;
 }
 
 textarea:focus {
   outline: 0;
   border: 2px solid #6D874C;
+  transition: all 0.5s ease;
 }
 
 button:focus {
@@ -229,6 +232,7 @@ button {
 
 button:hover {
   opacity: 0.8;
+  transition: all 0.5s ease;
 }
 
 .home-content {
@@ -272,12 +276,12 @@ button:hover {
 
   .heading > h1 {
     font-size: 64px;
-    margin-top: 20px;
+    margin-top: 5px;
   }
 
   .heading > h3 {
     font-size: 20px;
-    margin-top: 20px;
+    margin-top: 15px;
     font-size: 24px;
     width: 80%;
   }
@@ -300,7 +304,7 @@ button:hover {
   }
   .contact-box {
     width: 60%;
-    margin-top: 20px;
+    margin-top: 15px;
   }
   .contact {
     width: 80%;
