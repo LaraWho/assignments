@@ -1,0 +1,67 @@
+{
+  "appetizers": [
+    {
+      "name": "Caprese",
+      "ingredients": "mozzarella, tomato, olive oil, balsamic vinegar, bread",
+      "description": "one of the most delicious appetizers on the planet"
+    },
+    {
+      "name": "Bread",
+      "ingredients": "bread",
+      "description": "bready bread bread"
+    },
+    {
+      "name": "Olives",
+      "ingredients": "Olives",
+      "description": "Take a guess?"
+    }
+  ],
+  "coldSandwiches": [
+    {
+      "name": "The Cold Terminator",
+      "ingredients": "metal",
+      "description": "Iron like"
+    },
+    {
+      "name": "Hammy Sammy",
+      "ingredients": "Bread, ham",
+      "description": "hammed bread"
+    }
+  ],
+  "hotSandwiches": [
+    {
+      "name": "The Hawt Terminator",
+      "ingredients": "metal",
+      "description": "Iron like"
+    },
+    {
+      "name": "Hammy Sammy in the Sun",
+      "ingredients": "bread, ham, heat",
+      "description": "hammed bread under heat"
+    }
+  ],
+  "desserts": [
+    {
+      "name": "Cheesecake",
+      "ingredients": "cheese, cake",
+      "description": "A cake of cheese"
+    },
+    {
+      "name": "Ice cream",
+      "ingredients": "ice, cream",
+      "description": "Creamy ice"
+    }
+  ],
+  "drinks": [
+    {
+      "name": "Beer",
+      "ingredients": "Beer",
+      "description": "Beeeeeeer"
+    },
+    {
+      "name": "Red Wine",
+      "ingredients": "grapes, alcohol",
+      "description": "The elixir of life"
+    }
+  ]
+}
