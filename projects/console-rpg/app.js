@@ -2,7 +2,7 @@ var ask = require("readline-sync");
 
 var player = {
   name: '',
-  health: 15,
+  health: 350,
   attack: function() {
     return Math.floor(Math.random() * 50) + 30
   },
