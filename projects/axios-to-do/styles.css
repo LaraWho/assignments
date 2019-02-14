@@ -31,3 +31,21 @@ p {
   padding: 20px;
   margin: 10px auto;
 }
+
+.title-style {
+  border: none;
+  text-align: center;
+  font-size: 32px;
+}
+
+.para-style {
+  border: none;
+  text-align: center;
+  font-size: 22px;
+}
+
+.show-input {
+  border: 1px solid #333;
+  border-radius: 10px;
+  background-color: rgba(168, 168, 200, 0.507);
+}

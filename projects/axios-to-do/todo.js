@@ -1,6 +1,7 @@
 var listContainer = document.getElementById("list-box")
 var addNew = document.todo_form
 var todoList = document.list_box
+var showEditField = false
 var myList = []
 
 axios.get("https://api.vschool.io/lara/todo").then((response) => {
@@ -16,14 +17,17 @@ axios.get("https://api.vschool.io/lara/todo").then((response) => {
 renderList = (list) => {
   list.map((item) => {
     var todoBox = document.createElement("section")
-    var title = document.createElement("h2")
-    var para = document.createElement("p")
+    var title = document.createElement("input")
+    var para = document.createElement("input")
     var input = document.createElement("input")
     var deleteBtn = document.createElement("button")
     var editSaveBtn = document.createElement("button")
     deleteBtn.textContent = "delete"
     editSaveBtn.textContent = "edit"
-
+    editSaveBtn.classList = "edit"
+    title.type = "text"
+    para.type = "text"
+    
     input.type = "checkbox"
     input.className = "checkbox"
     input.name = "item"
@@ -31,14 +35,21 @@ renderList = (list) => {
     todoBox.className = "todo-item"
     
     input.addEventListener("click", updateComplete)
-
+    
     deleteBtn.addEventListener("click", deleteItem)
     todoBox.id = item._id
-
+    
     editSaveBtn.addEventListener("click", editSaveFn)
 
-    title.textContent = `${item.title}`
-    para.textContent = ` ${item.description}`
+    title.className = "title-style"
+    para.className = "para-style"
+    title.name = "title"
+    para.name = "para"
+    title.disabled = "disabled"
+    para.disabled = "disabled"
+
+    title.value = `${item.title}`
+    para.value = ` ${item.description}`
 
     listContainer.prepend(todoBox)
     todoBox.appendChild(title)
@@ -62,9 +73,30 @@ renderList = (list) => {
   })
 }
 
+
 editSaveFn = (e) => {
-  console.log(e.target.value)
   e.preventDefault()
+  // var updatedObj = {
+  //   newTitle: addNew.title.value,
+  //   newDesc: addNew.desc.value,
+  // }
+    e.target.parentNode.childNodes[0].toggleAttribute("disabled")
+    e.target.parentNode.childNodes[2].toggleAttribute("disabled")
+    e.target.parentNode.childNodes[0].classList.toggle("show-input")
+    e.target.parentNode.childNodes[2].classList.toggle("show-input")
+        
+    e.target.parentNode.childNodes[4].textContent === "edit" ? e.target.parentNode.childNodes[4].textContent = "save" : e.target.parentNode.childNodes[4].textContent = "edit"
+    
+  axios.put(`https://api.vschool.io/lara/todo/${e.target.parentElement.id}`).then((response) => {
+    console.log(todoList.title)
+    console.log(e.target.parentNode.childNodes)
+    e.target.parentNode.childNodes[0].value = updatedObj.newTitle
+    e.target.parentNode.childNodes[2].value = updatedObj.newDesc
+    
+  }).catch((error) => {
+    console.log(error)
+  })
+
 }
 
 deleteItem = (e) => {
