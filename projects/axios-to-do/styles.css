@@ -1,6 +1,27 @@
 body {
   color: #333;
   text-align: center;
+  font-family: 'Indie Flower', cursive;
+  letter-spacing: 5px;
+}
+
+h1 {
+  margin-top: 40px;
+  font-size: 42px;
+}
+
+#new-form {
+  margin: 20px auto;
+}
+
+#new-title:hover {
+  box-shadow: 1px 2px 3px #333;
+}
+#new-desc:hover {
+  box-shadow: 1px 2px 3px #333;
+}
+#new-img:hover {
+  box-shadow: 1px 2px 3px #333;
 }
 
 p {
@@ -9,6 +30,8 @@ p {
 
 .todo-img {
   width: 200px;
+  margin: 15px 5px;
+  border-radius: 10px;
 }
 
 .checked {
@@ -27,9 +50,54 @@ p {
   align-items: center;
   border: 2px solid #333;
   border-radius: 10px;
-  width: 300px;
   padding: 20px;
   margin: 10px auto;
+}
+
+.todo-item:hover {
+  box-shadow: 1px 2px 3px #333;
+}
+
+button:hover {
+  box-shadow: 1px 2px 3px #333;
+}
+.show-input:hover {
+  box-shadow: 1px 2px 3px #333;
+}
+
+.todo-item > input, .edit, .delete {
+  width: -webkit-fill-available;
+}
+
+input, button {
+  font-family: 'Indie Flower', cursive;
+  font-size: 20px;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 10px;
+  border: 2px solid #333;
+  outline: none;
+  letter-spacing: 5px;
+
+}
+
+button {
+  cursor: pointer;
+  padding: 5px 8px;
+}
+
+.delete {
+  background-color: #840000;
+  color: #fff;
+}
+
+.edit {
+  background-color: #002e84cf;
+  color: #fff;
+}
+
+label {
+  font-size: 20px;
 }
 
 .title-style {
@@ -45,7 +113,7 @@ p {
 }
 
 .show-input {
-  border: 1px solid #333;
+  border: 2px solid #333;
   border-radius: 10px;
-  background-color: rgba(168, 168, 200, 0.507);
+  background-color: #93b4f33d;
 }
