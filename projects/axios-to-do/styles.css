@@ -1,3 +1,5 @@
+
+
 body {
   color: #333;
   text-align: center;
@@ -52,6 +54,7 @@ p {
   border-radius: 10px;
   padding: 20px;
   margin: 10px auto;
+  transition: all .3s ease-in-out;
 }
 
 .todo-item:hover {
@@ -78,7 +81,15 @@ input, button {
   border: 2px solid #333;
   outline: none;
   letter-spacing: 5px;
+  transition: all .3s ease-in-out;
+}
 
+input:focus {
+  background-color: #93b4f33d;
+}
+
+input:active {
+  background-color: #93b4f33d;
 }
 
 button {
@@ -116,4 +127,25 @@ label {
   border: 2px solid #333;
   border-radius: 10px;
   background-color: #93b4f33d;
+  transition: all .3s ease-in-out;
+}
+
+@media (max-width: 400px) {
+  #new-form {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  .todo-item {
+    width: 80%;
+  }
+
+  input {
+    text-align: center;
+  }
 }

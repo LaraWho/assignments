@@ -64,39 +64,35 @@ renderList = (list) => {
         todoBox.appendChild(image)
       } 
 
-    todoBox.appendChild(deleteBtn)
-    todoBox.appendChild(editSaveBtn)
+      todoBox.appendChild(editSaveBtn)
+      todoBox.appendChild(deleteBtn)
 
           if(item.completed) {
             para.classList.add("checked")
             title.classList.add("checked")
             input.checked = true
           }
-
   })
 }
 
 
 editSaveFn = (e) => {
-  console.log(e.target.parentNode.childNodes)
   e.preventDefault()
     e.target.parentNode.childNodes[0].toggleAttribute("disabled")
     e.target.parentNode.childNodes[2].toggleAttribute("disabled")
     e.target.parentNode.childNodes[0].classList.toggle("show-input")
     e.target.parentNode.childNodes[2].classList.toggle("show-input")
         
-    e.target.parentNode.childNodes[5].textContent === "edit" ? e.target.parentNode.childNodes[5].textContent = "save" : e.target.parentNode.childNodes[5].textContent = "edit"
+    e.target.parentNode.childNodes[4].textContent === "edit" ? e.target.parentNode.childNodes[4].textContent = "save" : e.target.parentNode.childNodes[4].textContent = "edit"
     
   axios.put(`https://api.vschool.io/lara/todo/${e.target.parentElement.id}`, {
     title: e.target.parentNode.childNodes[0].value,
     description: e.target.parentNode.childNodes[2].value
   }).then((response) => {
     console.log(response.data)
-    
   }).catch((error) => {
     console.log(error)
   })
-
 }
 
 deleteItem = (e) => {
@@ -111,7 +107,6 @@ deleteItem = (e) => {
 postNewToDo = (e) => {
   var newTitle = addNew.todo_title.value
   var newDesc = addNew.todo_desc.value
-  console.log(addNew.todo_img.value === "")
 
   if(addNew.todo_img.value === "") {
     var newImg = "https://akns-images.eonline.com/eol_images/Entire_Site/2018120/rs_600x600-180220042623-600.benedict-cumberbatch-omaze.22018.jpg?fit=around|700:700&crop=700:700;center,top&output-quality=90"
@@ -157,6 +152,3 @@ updateComplete = (e) => {
     console.log(error)
   })
 }
-
-
-
