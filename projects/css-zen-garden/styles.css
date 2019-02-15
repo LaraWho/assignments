@@ -6,6 +6,10 @@ aside {
   display: none;
 }
 
+.download {
+  display: none;
+}
+
 body {
   color: #325050;
   background-color: #FFFFFF;
@@ -106,6 +110,7 @@ h3 {
   color: #FFFFFF;
   text-align: center;
   font-style: italic;
+  font-size: 2em;
 }
 
 .footer > p > a {
@@ -118,11 +123,39 @@ h3 {
   text-decoration: underline;
 }
 
+.footer-para {
+  padding: 1.5em 0;
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: bold;
+}
 
 .footer-icons {
   background-color: #134347;
-  color: #FFFFFF;
-  padding: 8% 10%;
+  text-align: center;
+  /* color: #FFFFFF; */
+  padding: 4% 10%;
+  font-size: 42px;
+  color: rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: space-evenly;
+  font-family: 'icomoon';
+  font-style: normal;
+}
+
+.footer-icons > .html::before {
+  content: "5";
+}
+.footer-icons > .cc::before {
+  content: "c";
+}
+.footer-icons > .css::before {
+  content: "3";
+}
+.footer-icons > .access::before {
+  content: "a";
+}
+.footer-icons > .git::before {
+  content: "g";
 }
 
 .sidebar1 {
@@ -142,7 +175,7 @@ h3 {
   border-top: solid 1px #d9e3dc;
   color: #616857;
   font-size: 1em;
-  padding: 1.2em 3.5em;
+  padding: 1.3em 3em 1em 3em;
 }
 
 .side-link-title {
@@ -179,6 +212,26 @@ h3 {
     grid-row-start: 20;
   }
 
+  .download {
+    display: block;
+  }
+  .download-text::before {
+    color: #a9b995;
+    background: #d9e1cd;
+    padding: 2px;
+    border-radius: 2px;
+    content: "D";
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'icomoon';
+    margin-right: 3px;
+  }
+  .download-text {
+    color: #809b7e;
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: bold;
+  }
+
   .footer {
     grid-row-start: 26;
   }
@@ -192,18 +245,19 @@ h3 {
   .main-content1 {
     grid-row-start: 3;
     grid-column: span 7;
-    width: 90%;
     margin: 1em auto;
   }
 
   .main-content2 {
     grid-column: span 7;
     grid-row: span 3;
+    padding: 1em auto;
   }
 
   .main-content3 {
     grid-column: span 7;
     grid-row-start: 20;
+    margin: 1em auto;
   }
 
   p {
@@ -211,14 +265,14 @@ h3 {
   }
 
   .summary {
-    margin-top: 3.5em;
+    margin-top: 4.5em;
   }
 
   .side-links {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(8, 100px);
     padding: 3.5em 0;
-    padding-bottom: 5.5em;
+    padding-bottom: 7.5em;
   }
 
   .side-links > li:first-child {
@@ -232,7 +286,7 @@ h3 {
     border-bottom: solid 1px #d9e3dc;
     color: #616857;
     font-size: 1em;
-    padding: 1em 0;
+    padding: 2em 0 1em 0;
     margin: 0 4.5em;
   }
 
