@@ -16,4 +16,7 @@ function countPests(e) {
     ${costPerC} for Cheep-cheeps
   </div>`;
 }
+
+// for some extra challenge, try to use "createElement" and other DOM methods to build the HTML instead 
+
 document.getElementById("calculate").addEventListener('click', countPests);
