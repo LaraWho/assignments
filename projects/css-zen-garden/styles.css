@@ -212,7 +212,6 @@ h3 {
   justify-content: space-evenly;
   font-family: 'icomoon';
   font-style: normal;
-  height: 54px;
 }
 
 .footer-icons > li {
@@ -354,6 +353,8 @@ h3 {
     padding: 5px;
     padding-top: 7px;
   }
+
+}
 
 @media (min-width: 1130px) {
 
@@ -509,4 +510,5 @@ h3 {
   .second-links > li:last-child {
     display: none;
   }
+
 }
