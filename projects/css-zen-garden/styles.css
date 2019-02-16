@@ -30,8 +30,12 @@ body {
 }
 
 .colour-change {
-  color: #0499C2;
+  color: rgb(5, 134, 170);
   font-weight: bold;
+}
+.colour-change:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .whole-page {
@@ -305,6 +309,10 @@ h3 {
 }
 
 @media (min-width: 600px) {
+
+  .right > p:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
 
   .header > h1::before {
     display: inline-block;
