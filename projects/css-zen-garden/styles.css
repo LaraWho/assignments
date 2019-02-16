@@ -42,13 +42,13 @@ body {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(30, auto);
-  background-image: url('/bamboo.png');
+  background-image: url('bamboo.png');
   background-attachment: fixed;
 }
 
 .header {
-  background: #2d6360 50% 0 url('/huntington.jpg') no-repeat;
-  background-image: url('/contours-opaque.png'), url('/noise.png'), url('/gridlines.png'), url('/huntington.jpg');
+  background: #2d6360 50% 0 url('huntington.jpg') no-repeat;
+  background-image: url('contours-opaque.png'), url('noise.png'), url('gridlines.png'), url('huntington.jpg');
   background-attachment: fixed, fixed, fixed, scroll;
   background-position: 0 0, 0 0, -5px -25px, 0 50%;
   background-repeat: repeat, repeat, repeat, no-repeat;
@@ -74,7 +74,7 @@ h1 {
 }
 
 .header > h1::before {
-  background-image: url('/enso.svg');
+  background-image: url('enso.svg');
   opacity: 0.6;
   margin: 10px auto 20px auto;
   background-size: 100%;
@@ -199,7 +199,7 @@ h3 {
   color: rgba(255, 255, 255, 0.4);
   font-weight: bold;
   background: #3e5d67;
-  background-image: url('/contours-opaque.png'), url('/noise.png'), url('/gridlines.png'), url('/huntington.jpg');
+  background-image: url('contours-opaque.png'), url('noise.png'), url('gridlines.png'), url('huntington.jpg');
   background-attachment: fixed, fixed, fixed, scroll;
   background-position: 0 0, 0 0, -5px -25px, 0 50%;
   background-repeat: repeat, repeat, repeat, no-repeat;
