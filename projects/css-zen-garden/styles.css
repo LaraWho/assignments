@@ -28,6 +28,9 @@ body {
 .underline {
   text-decoration: underline dotted #325050;
 }
+.underline-subheading {
+  text-decoration: underline dotted rgba(255,255,255,0.6);
+}
 
 .colour-change {
   color: rgb(5, 134, 170);
@@ -41,7 +44,7 @@ body {
 .whole-page {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(30, auto);
+  grid-template-rows: repeat(5, auto);
   background-image: url('images/bamboo.png');
   background-attachment: fixed;
   width: 100%;
@@ -174,7 +177,6 @@ h3 {
 }
 
 .footer {
-  /* background-color: #3e5d67; */
   grid-column: span 10;
   grid-row: span 3;
   color: #FFFFFF;
@@ -250,16 +252,15 @@ h3 {
 
 
 .sidebar1 {
+  background-color: #F1F7F4;
   grid-column: span 10;
   grid-row: span 2;
 }
 
 .side-links {
-  /* background-color: #c0cac3; */
-  background-color: #F1F7F4;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(4, 80px);
+  grid-template-rows: repeat(4, auto);
 }
 
 .side-links > li {
@@ -284,7 +285,7 @@ h3 {
 .second-links {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(3, 70px);
+  grid-template-rows: repeat(3, auto);
 }
 
 .second-links > li {
@@ -403,7 +404,6 @@ h3 {
     height: -webkit-fill-available;
     width: 30%;
     background: rgba(19, 67, 71, 0.2);
-    /* background-color: rgba(255, 255, 255, 0.15); */
   }
 
   .right > p {
@@ -434,39 +434,37 @@ h3 {
     display: unset;
     background-color: #E5EDE7;
     grid-column: span 7;
-    grid-row-start: 20;
+    grid-row-start: 8;
   }
 
   .footer {
-    grid-row-start: 26;
+    grid-row-start: 10;
   }
 
   .footer-icons {
     font-size: 72px;
     padding: 30px 50px 60px 50px;
-    /* height: 70px; */
   }
 
   .sidebar1 {
     grid-column: 8 / span 10;
-    grid-row-start: 3;
-    /* grid-row: span 8; */
+    grid-row: 3;
   }
 
   .main-content1 {
-    grid-row-start: 3;
+    grid-row: 3;
     grid-column: span 7;
   }
 
   .main-content2 {
     grid-column: span 7;
-    grid-row: span 3;
+    grid-row: 5;
     padding: 1em auto;
   }
 
   .main-content3 {
     grid-column: span 7;
-    grid-row-start: 20;
+    grid-row: 8;
   }
 
   p {
@@ -479,9 +477,8 @@ h3 {
 
   .side-links {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(8, 100px);
+    grid-template-rows: repeat(8, auto);
     padding: 3.5em 0;
-    padding-bottom: 7.5em;
   }
 
   .side-links > li:first-child {
@@ -495,8 +492,8 @@ h3 {
     border-bottom: solid 1px #d9e3dc;
     color: #616857;
     font-size: 1em;
-    padding: 2em 0 1em 0;
-    margin: 0 4.5em;
+    padding: 2em 0 2em 0;
+    margin: 0 4em;
   }
 
   .sidebar2 {
