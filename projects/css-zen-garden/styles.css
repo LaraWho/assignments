@@ -157,7 +157,7 @@ h3 {
 }
 
 .main-content2 {
-  background-color: rgba(138,188,159,0.5);
+  background-color: rgba(138,188,159,0.4);
   grid-column: span 10;
   grid-row: span 5;
 }
@@ -280,7 +280,7 @@ h3 {
 }
 
 .sidebar2 {
-  background-color: rgba(138,188,159,0.5);
+  background-color: rgba(138,188,159,0.4);
   grid-column: span 10;
   grid-row: span 2;
 }
@@ -299,14 +299,9 @@ h3 {
   line-height: 1.3;
 }
 
-.second-links > li:hover {
+.second-links > li:hover, .side-links > li:hover {
     color: #64A49D;
     cursor: pointer;
-}
-
-.side-links > li:hover {
-  color: #64A49D;
-  cursor: pointer;
 }
 
 .side-links > li > .side-link-title:hover {
@@ -324,13 +319,9 @@ h3 {
     display: none;
   }
 
-  .side-links > li {
+  .side-links > li, .second-links > li  {
     grid-template-rows: repeat(3, auto);
-    font-size: 14px;
-  }
-  .second-links > li {
-    grid-template-rows: repeat(3, auto);
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
