@@ -367,8 +367,8 @@ h3 {
     font-family: 'icomoon';
     margin-right: 3px;
     transition: all 0.25s ease-out;
-
   }
+
   .download-text {
     color: #809b7e;
     font-family: 'Julius Sans One', sans-serif;
@@ -377,10 +377,15 @@ h3 {
     transition: all 0.25s ease-out;
   }
   .download-text:hover {
-    background-color: #3D8A9F;
+    background-color: #347D93;
     color: #ffffff;
     padding: 5px;
     padding-top: 7px;
+  }
+
+  .download-text:hover::before {
+    background-color: #3D8A9F;
+    color: #ffffff;
   }
 
   .footer-icons {
@@ -391,7 +396,6 @@ h3 {
 }
 
 @media (min-width: 1130px) {
-
 
   .header {
     justify-content: center;
