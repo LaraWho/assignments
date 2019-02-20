@@ -7,7 +7,6 @@ class Player {
     this.gameActive = true
   }
   setName(namePicked) {
-    
     return this.name = namePicked
   }
   gotHit() {
