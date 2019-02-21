@@ -5,6 +5,11 @@
   flex-direction: $direction;
 }
 
+@mixin border() {
+  border: 2px solid rgb(39, 39, 70);
+  border-radius: 10px;
+}
+
 @mixin width-height($width, $height) {
   width: $width;
   height: $height;

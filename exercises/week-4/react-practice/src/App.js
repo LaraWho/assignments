@@ -3,14 +3,15 @@ import Nav from './components/Nav';
 import Info from './components/Info';
 import Animals from './components/Animals';
 import Footer from './components/Footer';
-
+import animals from './components/animalList';
 
 const App = () => {
   return (
-    <div>
+    <div className="whole-page">
       <Nav />
       <Info />
-      <Animals />
+        <Animals props={animals.animals}/>
+  
       <Footer />
     </div>
   )

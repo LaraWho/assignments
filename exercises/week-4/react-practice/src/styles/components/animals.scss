@@ -1,0 +1,25 @@
+.animals-container {
+  @include flexSetUp(center, center, row);
+  flex-wrap: wrap;
+}
+
+.animal-box {
+  font-family: $body-font;
+  @include flexSetUp(center, center, column);
+  @include border();
+  // background-color: #ffef9d;
+  width: 30%;
+  margin: 20px;
+  padding: 20px;
+
+  h1 {
+    font-family: $header-font;
+  }
+  img {
+    width: 80%;
+    @include border();
+  }
+  button {
+    cursor: pointer;
+  }
+}
