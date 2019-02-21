@@ -4,7 +4,7 @@ const Animals = (props) => {
   let animalArr = props.props
   let mappedAnimals = animalArr.map((cutie, i) => {
     return (
-      <div key={i} className="animal-box">
+      <div key={i+cutie} className="animal-box">
         <img src={cutie.image} alt={cutie.name}/>
         <h1>{cutie.name}</h1>
         <p>{cutie.info}</p>
