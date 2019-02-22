@@ -12,7 +12,7 @@ const Cards = ({placeName, timeToGo, price}) => {
     backgroundImage = "url(https://images.mentalfloss.com/sites/default/files/styles/mf_image_16x9/public/140069999.jpg?itok=REL7bPYC&resize=1100x1100)"
   }
 
-  let priceSign;
+    let priceSign;
     if(price <= 500) {
       priceSign = '£'
     } else if(price > 500 && price <= 1000) {

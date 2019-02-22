@@ -1,0 +1,10 @@
+@import "reset.scss";
+@import "mixins.scss";
+@import "variables.scss";
+@import "globals.scss";
+
+@import "./components/header.scss";
+@import "./components/navbar.scss";
+@import "./components/bloglist.scss";
+@import "./components/blogpost.scss";
+@import "./components/footer.scss";
