@@ -1,0 +1,39 @@
+body {
+  text-align: center;
+  background-color: rgb(245, 210, 55);
+}
+
+.container {
+  border: 2px solid #333;
+  display: grid;
+  width: 75%;
+  margin: 5% auto;
+  grid-template-areas: 
+      "a1 a2"
+      "b1 b2"
+      "c1 c2"
+      "d1 d2"
+      "e1 e2"
+      "f1 f2"
+      "g1 g2"
+      "h1 h2"
+      "last last";
+  grid-template-rows: repeat(9, 100px);
+}
+
+button {
+  cursor: pointer;
+  border: 2.5px solid #333;
+  font-weight: bold;
+  font-size: 22px;
+  background-color: #ffe866;
+}
+
+button:hover {
+  background-color: rgb(245, 210, 55);
+}
+
+button:focus {
+  outline: none;
+}
+
