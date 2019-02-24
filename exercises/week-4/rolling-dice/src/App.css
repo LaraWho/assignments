@@ -1,0 +1,22 @@
+.dice > span {
+  border: 2px solid black;
+  margin: 10px;
+  padding: 20px;  
+}
+
+.dice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dice-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+button {
+  margin: 20px;
+}
