@@ -16,7 +16,8 @@ class App extends Component {
       box6: '#' +  Math.random().toString(16).substr(-6),
       box7: '#' +  Math.random().toString(16).substr(-6),
       box8: '#' +  Math.random().toString(16).substr(-6),
-      showColor: true,
+      colorChange: true,
+      toggleWB: true,
       beyonce: false
     }
   }
@@ -44,10 +45,10 @@ class App extends Component {
   }
 
   toggleColor = () => {
-    let newColor = this.state.showColor ? "#333" : "#FFF";
+    let newColor = this.state.toggleWB ? "#333" : "#FFF";
     this.setState((prevState) => {
       return({
-        showColor: !prevState.showColor,
+        toggleWB: !prevState.toggleWB,
         box1: newColor,
         box2: newColor,
         box3: newColor,
@@ -57,10 +58,10 @@ class App extends Component {
   }
 
   changeToPurple = () => {
-    let newColor = this.state.showColor ? "#9900e6" : "#cc66ff"
+    let newColor = this.state.colorChange ? "#9900e6" : "#cc66ff"
     this.setState((prevState) => {
       return({
-        showColor: !prevState.showColor,
+        colorChange: !prevState.colorChange,
         box1: newColor,
         box2: newColor
       })
@@ -68,20 +69,20 @@ class App extends Component {
   }
 
   changeToBlue1 = () => {
-    let newColor = this.state.showColor ? "#004d99" : "#3399ff"
+    let newColor = this.state.colorChange ? "#004d99" : "#3399ff"
     this.setState(prevState => {
       return({
-        showColor: !prevState.showColor,
+        colorChange: !prevState.colorChange,
         box3: newColor
       })
     })
   }
 
   changeToBlue2 = () => {
-    let newColor = this.state.showColor ? "#004d99" : "#3399ff"
+    let newColor = this.state.colorChange ? "#004d99" : "#3399ff"
     this.setState(prevState => {
       return({
-        showColor: !prevState.showColor,
+        colorChange: !prevState.colorChange,
         box4: newColor
       })
     })
@@ -119,7 +120,7 @@ class App extends Component {
         <Box backgroundColor={this.state.box6}/>
         <Box backgroundColor={this.state.box7}/>
         <Box backgroundColor={this.state.box8}/>
-        <button onClick={this.toggleColor}>Click me!</button>
+        <button onClick={this.toggleColor}>{this.state.toggleWB ? "Black!" : "White!"}</button>
         <button onClick={this.changeToPurple}>Click me!</button>
         <button onClick={this.changeToBlue1}>Click me!</button>
         <button onClick={this.changeToBlue2}>Click me!</button>
@@ -127,8 +128,8 @@ class App extends Component {
         <button onClick={this.changeColor6}>Click me!</button>
         <button onClick={this.changeColor7}>Click me!</button>
         <button onClick={this.changeColor8}>Click me!</button>
-        <button onClick={this.refreshColors}>Click me!</button>
-        <button onClick={this.toggleBeyonce}>Click me!</button>
+        <button onClick={this.refreshColors}>All change!</button>
+        <button onClick={this.toggleBeyonce}>Beyonce!</button>
       </div>
     );
   }
