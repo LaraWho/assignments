@@ -1,3 +1,21 @@
-.fa-github::before {
-  content: "\f09b";
+.footer {
+  @include flexSetUp(center, center, column);
+
+  .footer-icons {
+    @include flexSetUp();
+    margin: 20px;
+  }
+}
+
+.fab {
+  font-size: 40px;
+  border-radius: 50%;
+  @include width-height(80px, 80px);
+  @include flexSetUp(center, center);
+  color: #FFF;
+  background-color: black;
+}
+
+.fa-facebook-f {
+  margin: 0 20px;
 }
