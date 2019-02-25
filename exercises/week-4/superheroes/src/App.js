@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './styles.css';
 import Superhero from './Superhero';
-import heroList from './heroList';
+let heroList = require('./heroList.json');
 
 class App extends Component {
 

@@ -12,22 +12,23 @@ class DiceBox extends Component {
     super(props)
 
     this.state = {
-      one: 1,
-      two: 2,
-      three: 3,
-      four: 4,
-      five: 5
+      one: Math.ceil(Math.random() * 6),
+      two: Math.ceil(Math.random() * 6),
+      three: Math.ceil(Math.random() * 6),
+      four: Math.ceil(Math.random() * 6),
+      five: Math.ceil(Math.random() * 6),
     }
 
   }
 
   rollDice = () => {
+    console.log(this.state)
     this.setState({
       one: Math.ceil(Math.random() * 6),
       two: Math.ceil(Math.random() * 6),
       three: Math.ceil(Math.random() * 6),
       four: Math.ceil(Math.random() * 6),
-      five: Math.ceil(Math.random() * 6)
+      five: Math.ceil(Math.random() * 6),
     })
   }
 
@@ -35,19 +36,14 @@ class DiceBox extends Component {
     
     return(
       <div className="dice-box">
-          <div className="dice">
-            <span>{this.state.one}</span>
-            <span>{this.state.two}</span>
-            <span>{this.state.three}</span>
-            <span>{this.state.four}</span>
-            <span>{this.state.five}</span>
-          </div>
+        <div className="dice">
+          <Die number={this.state.one} />
+          <Die number={this.state.two} />
+          <Die number={this.state.three} />
+          <Die number={this.state.four} />
+          <Die number={this.state.five} />
+      </div>
           <button onClick={this.rollDice}>roll it!</button>
-          <Die num={this.state.one}/>
-          <Die num={this.state.two}/>
-          <Die num={this.state.three}/>
-          <Die num={this.state.four}/>
-          <Die num={this.state.five}/>
       </div>
     )
   }

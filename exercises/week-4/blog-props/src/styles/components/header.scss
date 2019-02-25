@@ -13,17 +13,19 @@
     position: absolute;
     top: 0;
     left: 0;
+
+      h1 {
+        font-size: 5em;
+        line-height: 60px;
+        font-weight: 800;
+      }
+      
+      h2 {
+        font-size: 24px;
+        line-height: 26.4px;
+        margin-top: 30px;
+      }
     }
   
-  h1 {
-    font-size: 50px;
-    line-height: 60px;
-    font-weight: 800;
-  }
-  
-  h2 {
-    font-size: 24px;
-    line-height: 26.4px;
-  }
 
 }
