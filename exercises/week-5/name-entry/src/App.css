@@ -1,8 +1,17 @@
 .App {
-  text-align: center;
   margin: 20px;
 }
 
-li {
-  list-style: none;
+.fas {
+  cursor: pointer;
+  font-size: 50px;
 }
+
+.fa-heart {
+  color: rgb(245, 69, 53);
+}
+
+.fa-hand-middle-finger {
+  color: rgb(163, 5, 5);
+}
+

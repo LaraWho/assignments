@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Conditional from './Conditional';
 
 class App extends Component {
   constructor() {
@@ -8,7 +9,12 @@ class App extends Component {
     this.state = {
       firstName: '',
       lastName: '',
-      names: ['Benedict Cumberbatch']
+      names: [
+        {firstName:'Benedict', 
+        lastName: 'Cumberbatch'},
+        {firstName:'Benny', 
+        lastName: 'Cumberbatch'}
+      ]
     }
   }
 
@@ -20,10 +26,12 @@ class App extends Component {
 
   addName = (e) => {
     e.preventDefault()
-    let newName = `${this.state.firstName} ${this.state.lastName}`
     this.setState((prevState) => {
+      let { firstName, lastName } = prevState
       return({
-        names: [...prevState.names, newName]
+        names: [...prevState.names, {firstName, lastName}],
+        firstName: '',
+        lastName: ''
       }) 
     })
   }
@@ -33,24 +41,24 @@ class App extends Component {
     let mappedNames = this.state.names.map((name, i) => {
       return(
         <li key={i+name}>
-          {name}
+          {name.firstName} {name.lastName}
         </li>
       )
     })
-
     return (
-      <div className="App">
-        <input onChange={this.handleChange} type="text" placeholder="First Name" name="firstName"/>
-        <input onChange={this.handleChange} type="text" placeholder="Last Name" name="lastName"/>
-        <button onClick={this.addName}>add name</button>
+      <form className="App" onSubmit={this.addName}>
 
-        <h1>{this.state.firstName} {this.state.lastName}</h1>
-        
-        <ul>
+        <input onChange={this.handleChange} type="text" placeholder="First Name" name="firstName" value={this.state.firstName}/>
+        <input onChange={this.handleChange} type="text" placeholder="Last Name" name="lastName" value={this.state.lastName}/>
+        <button>add name</button>
+
+        <ol>
           {mappedNames}
-        </ul>
+        </ol>
        
-      </div>
+        <Conditional />
+      </form>
+
     );
   }
 }
