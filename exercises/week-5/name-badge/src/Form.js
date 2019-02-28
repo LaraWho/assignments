@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import NameBadge from './NameBadge';
+import sweetie from 'sweetalert2';
 
 class Form extends Component {
   constructor(props) {
     super(props)
       this.state = {
+        canSubmit: true,
         inputs: {
           firstName: '',
           lastName: '',
@@ -59,8 +61,18 @@ class Form extends Component {
     })
   }
 
+  checkValues = () => {
+    let canSubmit;
+    Object.values(this.state.inputs).map((el,i)=> {
+      return el.length < 3 ? canSubmit = false : null
+    })
+    this.setState({canSubmit})
+  }
+  
   addPerson = (e) => {
     e.preventDefault()
+    this.checkValues()
+    this.state.canSubmit ?
     this.setState((prevState) => {
       return ({
         people: [prevState.inputs, ...prevState.people],
@@ -74,14 +86,16 @@ class Form extends Component {
           info: ''
         }
       })
-    })
+    }) 
+      :
+    sweetie.fire('woops, more than 3 characters in each field please!')
   }
 
   render() {
     let { firstName, lastName, email, phone, birthPlace, favFood, info} = this.state.inputs
 
+    let backgroundColor;
     let mappedPeople = this.state.people.map((person, i) => {
-        let backgroundColor;
         i % 2 === 0 ? backgroundColor = "#e22828" : backgroundColor = "#1b1b8c"
         return <NameBadge badge={person} key={i} backgroundColor={backgroundColor}/> 
     })

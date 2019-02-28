@@ -2,7 +2,6 @@ import React from 'react';
 
 const NameBadge = (props) => {
 
-  console.log(props.backgroundColor)
   let { firstName, lastName, email, phone, birthPlace, favFood, info } = props.badge
   return(
       <div className="badge">

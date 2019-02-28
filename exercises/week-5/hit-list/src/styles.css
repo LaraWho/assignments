@@ -1,0 +1,52 @@
+.header {
+  margin-top: 0;
+  background-color: rgb(22, 21, 21);
+  display: flex;
+  align-items: center;
+}
+.don {
+  height: 60px;
+}
+body {
+  background-color: #D8D8D8;
+}
+.whole-page {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+  padding-top: 40px;
+}
+
+.target {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+  margin: 10px;
+}
+
+h1 {
+  text-align: center;
+  color: rgb(192, 12, 12);
+  margin: 0;
+}
+
+img {
+  height: 200px;
+}
+
+p {
+  position: absolute;
+  color: aliceblue;
+  z-index: 1;
+  text-align: center;
+  background-color: rgba(27, 149, 224, 0.6);
+  width: 100%;
+  height: 30px;
+  margin: 0;
+  padding-top: 10px;
+  font-weight: bold;
+}
