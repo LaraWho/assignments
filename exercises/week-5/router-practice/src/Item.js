@@ -5,7 +5,6 @@ import products from './products.json';
 const Item = (props) => {
 
   const { _id } = props.match.params
-
   const item = products.find((item) => {
     return item._id === _id
   })
@@ -15,7 +14,6 @@ const Item = (props) => {
       <h1>{item.name}</h1>
       <p>{item.description}</p>
       <p>£{item.price}</p>
-      <button onClick={props.history.goBack}>go back</button>
     </div>
   )
 }

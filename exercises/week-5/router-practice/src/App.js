@@ -6,8 +6,6 @@ import NavBar from './NavBar';
 import Footer from './Footer';
 import About from './About';
 import Products from './Products';
-import Item from './Item';
-
 
 class App extends Component {
   render() {
@@ -18,8 +16,8 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Home}/>
             <Route path="/about" component={About}/>
-            <Route exact path="/products" component={Products}/>
-            <Route path="/products/:_id" component={Item}/>
+            <Route path="/products" component={Products}/>
+            
           </Switch>
 
         <Footer />
