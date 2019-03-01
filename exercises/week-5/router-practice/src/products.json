@@ -1,0 +1,26 @@
+[
+  {
+      "name": "Septic Cleaner",
+      "price": 950,
+      "_id": "123",
+      "description": "You know what this is, don't pretend like you don't"
+  },
+  {
+      "name": "Snaking Device",
+      "price": 500,
+      "_id": "134",
+      "description": "You know what this is you little snake, don't pretend like you don't"
+  },
+  {
+      "name": "Tree Digging Tool",
+      "price": 5000,
+      "_id": "352",
+      "description": "For all the diggers who love trees"
+  },
+  {
+      "name": "Drain Replacement",
+      "price": 150,
+      "_id": "613",
+      "description": "For you hairy people, you know who you are"
+  }
+]

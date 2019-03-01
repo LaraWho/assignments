@@ -1,21 +1,37 @@
 .navbar {
   position: absolute;
   z-index: 2;
+  width: 100%;
   font-weight: bold;
   display: flex;
   align-items: baseline;
   justify-content: space-around;
-  width: 100%;
-  color: #fff;
+  color: #333;
+  background-color: #fff;
   padding: 20px;
+
+  @include desktop {
+  }
 
   h2 {
     font-size: 22px;
     margin-right: 80px; 
   }
+
+  h3 {
+    color: #333;
+    cursor: pointer;
+
+    @include desktop {
+      // display: none;
+    }
+  }
   
   ul {
-  display: flex;
+    display: flex;
+      // display: none;
+    @include desktop {
+    }
 
   }
 
@@ -24,4 +40,14 @@
     margin-left: 50px; 
     font-size: 12px;
   }
+
+  .open {
+    @include flexSetUp(center, baseline, column);
+    height: 200px;
+  }
+
+  .closed {
+    height: 0;
+  }
+  
 }

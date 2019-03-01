@@ -17,7 +17,6 @@ class App extends Component {
   async componentDidMount() {
     const response = await axios.get('https://s3.amazonaws.com/v-school/data/hitlist.json')
     response.data[5].image = jabba
-    
     this.setState({targets: response.data})
   }
 

@@ -1,33 +1,17 @@
-import React, {Component} from 'react';
+import React from 'react';
+import { withToggler } from './Toggler'; 
 
-class Conditional extends Component {
-  constructor() {
-    super()
-    this.state = {
-      isLoved: false
-    }
-  }
-
-  clickIt = () => {
-    this.setState(prevState => {
-      return({
-        isLoved: !prevState.isLoved
-      })
-    })
-  }
-
-  render() {
+const Conditional = ({on, toggle}) => {
     return(
-      <div onClick={this.clickIt}>
-
-        {this.state.isLoved ? 
+      <div onClick={toggle}>
+          {on ?
           <i className="fas fa-hand-middle-finger"> hate</i> 
             :
           <i className="fas fa-heart"> love</i>
-        }
+          }
 
       </div>
     )
   }
-}
-export default Conditional;
+
+export default withToggler(Conditional);

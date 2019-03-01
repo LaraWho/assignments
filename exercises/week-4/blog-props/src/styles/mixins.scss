@@ -1,3 +1,9 @@
+@mixin desktop {
+  @media (min-width: 840px) {
+    @content;
+  }
+}
+
 @mixin flexSetUp($justify: center, $align: center, $direction: row) {
   display: flex;
   justify-content: $justify;

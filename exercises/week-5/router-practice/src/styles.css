@@ -1,0 +1,26 @@
+.whole-page {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+a {
+  color: rgb(3, 3, 73);
+  text-decoration: none;
+}
+
+.footer {
+  position: absolute;
+  bottom: 20px;
+}
+.navbar {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
