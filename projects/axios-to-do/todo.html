@@ -13,7 +13,7 @@
   
   <h1>Things to do...</h1>
 
-  <!-- form for inputting a new todo -->
+  <!-- Form for inputting a new todo -->
   <form id="new-form" name="todo_form">
     <input id="new-title" name="todo_title" type="text" placeholder="title" required>
     <input id="new-desc" name="todo_desc" type="text" placeholder="description">
@@ -21,8 +21,8 @@
     <button>add</button>
   </form>
 
-  <!-- use div tag unless it's actually just a form -->
-  <form name="list_box" id="list-box"></form>
+  <!-- Container for each todo-->
+  <div id="list-box"></div>
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
   <script src="todo.js"></script>

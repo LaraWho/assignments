@@ -1,6 +1,5 @@
 var listContainer = document.getElementById("list-box")
 var addNew = document.todo_form
-var todoList = document.list_box
 var showEditField = false
 var myList = []
 
@@ -19,7 +18,7 @@ renderList = (list) => {
   list.map((item) => {
     
     //Creating all the elements to hold the content for the individual to-dos
-    var todoBox = document.createElement("section")
+    var todoBox = document.createElement("form")
     var title = document.createElement("input")
     var para = document.createElement("input")
     var input = document.createElement("input")
@@ -120,29 +119,29 @@ deleteItem = (e) => {
 }
 
 postNewToDo = (e) => {
-  var newTitle = addNew.todo_title.value
-  var newDesc = addNew.todo_desc.value
+  var title = addNew.todo_title.value
+  var description = addNew.todo_desc.value
 
   // If no image URL is inputted by the user then add this beautiful image of Benedict Cumberbatch for them!
   if(addNew.todo_img.value === "") {
-    var newImg = "https://akns-images.eonline.com/eol_images/Entire_Site/2018120/rs_600x600-180220042623-600.benedict-cumberbatch-omaze.22018.jpg?fit=around|700:700&crop=700:700;center,top&output-quality=90"
+    var imgUrl = "https://akns-images.eonline.com/eol_images/Entire_Site/2018120/rs_600x600-180220042623-600.benedict-cumberbatch-omaze.22018.jpg?fit=around|700:700&crop=700:700;center,top&output-quality=90"
   } else {
-    var newImg = addNew.todo_img.value
+    var imgUrl = addNew.todo_img.value
   }
   //change to object literal in post object
   axios.post("https://api.vschool.io/lara/todo", {
-    title: newTitle,
-    description: newDesc,
-    imgUrl: newImg
+    title,
+    description,
+    imgUrl
     
   }).then((response) => {
     myList.push(response.data)
     renderList([response.data])
 
-    // Resetting inputs after submit
-    addNew.todo_title.value = ''
-    addNew.todo_desc.value = ''
-    addNew.todo_img.value = ''
+  // Resetting inputs after submit
+  addNew.todo_title.value = ''
+  addNew.todo_desc.value = ''
+  addNew.todo_img.value = ''
 
   }).catch((error) => {
     console.log(error)
@@ -158,12 +157,12 @@ updateComplete = (e) => {
   // Checking off a todo as complete, updating the property in the API and toggling the style of the text elements.
   e.target.parentNode.childNodes[2].classList.toggle("checked")
   e.target.parentNode.childNodes[0].classList.toggle("checked")
-    var bool = false
-      if(e.target.value === "true") {
-        bool = false
-      } else {
-        bool = true
-      }
+  var bool = false
+  if(e.target.value === "true") {
+    bool = false
+  } else {
+    bool = true
+  }
   axios.put(`https://api.vschool.io/lara/todo/${e.target.parentElement.id}`, {
     completed: bool
   }).then((response) => {
