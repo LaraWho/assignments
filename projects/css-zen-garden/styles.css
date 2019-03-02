@@ -1,5 +1,28 @@
+/* Styles that apply globally */
+
 * {
   -webkit-font-smoothing: antialiased;
+}
+
+body {
+  color: #325050;
+  background-color: #FFFFFF;
+  font-family: 'Libre Baskerville', sans-serif;
+  overflow-x: hidden;
+}
+
+.whole-page {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(5, auto);
+  background-image: url('images/bamboo.png');
+  background-attachment: fixed;
+}
+
+/* Setting up items which only appear whilst in desktop view */
+
+.download {
+  display: none;
 }
 
 .right {
@@ -10,16 +33,7 @@ aside {
   display: none;
 }
 
-.download {
-  display: none;
-}
-
-body {
-  color: #325050;
-  background-color: #FFFFFF;
-  font-family: 'Libre Baskerville', sans-serif;
-  overflow-x: hidden;
-}
+/* Text styling for specific words in all text content */
 
 .italic {
   font-style: italic;
@@ -29,6 +43,7 @@ body {
 .underline {
   text-decoration: underline dotted #325050;
 }
+
 .underline-subheading {
   text-decoration: underline dotted rgba(255,255,255,0.6);
 }
@@ -37,18 +52,13 @@ body {
   color: rgb(5, 134, 170);
   font-weight: bold;
 }
+
 .colour-change:hover {
   text-decoration: underline;
   cursor: pointer;
 }
 
-.whole-page {
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(5, auto);
-  background-image: url('images/bamboo.png');
-  background-attachment: fixed;
-}
+/* Header */
 
 .header {
   background: #2d6360 50% 0 url('images/huntington.jpg') no-repeat;
@@ -95,6 +105,8 @@ h2 {
   font-weight: bold;
 }
 
+/* Button in the header */
+
 .view-all > p {
   width: 100vw;
   font-weight: bold;
@@ -106,10 +118,12 @@ h2 {
   background-color: rgba(255, 255, 255, 0.2);
   position: relative;
 }
+
 .view-all {
   cursor: pointer;
   transition: all 0.25s ease-out;
 }
+
 .view-all:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
@@ -126,6 +140,8 @@ h2 {
   right: 15px;
   top: 2px;
 }
+
+/* Main article text content, split into three sections */
 
 .main-content1 {
   grid-column: span 10;
@@ -176,6 +192,8 @@ h3 {
   margin-bottom: 2.5em;
 }
 
+/* Footer */
+
 .footer {
   grid-column: span 10;
   grid-row: span 3;
@@ -191,6 +209,7 @@ h3 {
   text-decoration: none;
   font-style: normal;
 }
+
 .footer > p > a:hover {
   text-decoration: underline;
 }
@@ -252,6 +271,7 @@ h3 {
   content: "g";
 }
 
+/* Author (first) sidebar links */
 
 .sidebar1 {
   background-color: #F1F7F4;
@@ -278,6 +298,8 @@ h3 {
   color: #607476;
   font-size: 1.2em;
 }
+
+/* Site navigation (second) sidebar links */
 
 .sidebar2 {
   background-color: rgba(138,188,159,0.4);
@@ -311,6 +333,8 @@ h3 {
 
 @media (max-width: 400px) {
 
+  /* Changing position of both sidebar links for specifically mobile */
+
   .side-links, .second-links {
     grid-template-columns: 1fr;
   }
@@ -327,13 +351,24 @@ h3 {
 
 @media (min-width: 600px) {
 
+  /* Footer */
+
   .footer-para {
     font-size: 28px;
   }
 
+  .footer-icons {
+    font-size: 64px;
+    padding: 30px 50px;
+  }
+
+  /* Adding a second class to the button in the header */
+
   .right > p:hover {
     background-color: rgba(255, 255, 255, 0.2);
   }
+
+  /* Header */
 
   .header > h1::before {
     display: inline-block;
@@ -351,6 +386,8 @@ h3 {
     font-size: 1.2em;
     margin-top: -30px;
   }
+
+  /* Adding the text and icons about downloading after the header */
 
   .download {
     display: block;
@@ -376,6 +413,7 @@ h3 {
     cursor: pointer;
     transition: all 0.25s ease-out;
   }
+
   .download-text:hover {
     background-color: #347D93;
     color: #ffffff;
@@ -388,14 +426,11 @@ h3 {
     color: #ffffff;
   }
 
-  .footer-icons {
-    font-size: 64px;
-    padding: 30px 50px;
-  }
-
 }
 
 @media (min-width: 1130px) {
+
+  /* Header */
 
   .header {
     justify-content: center;
@@ -408,6 +443,22 @@ h3 {
     opacity: 1;
     margin-bottom: -25px;
   }
+
+  .header > h1 {
+    font-size: 4em;
+    margin-top: 0;
+    margin-left: -400px;
+  }
+
+  h2 {
+    padding-left: 0;
+    font-size: 1.8em;
+    margin-left: -450px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+  }
+
+  /* Button in the header */
 
   .view-all {
     display: none;
@@ -439,19 +490,7 @@ h3 {
     padding-right: 70px;
   }
 
-  .header > h1 {
-    font-size: 4em;
-    margin-top: 0;
-    margin-left: -400px;
-  }
-
-  h2 {
-    padding-left: 0;
-    font-size: 1.8em;
-    margin-left: -450px;
-    margin-top: 10px;
-    margin-bottom: 50px;
-  }
+  /* Adding visibility to a section of the grid, which was not there for mobile or tablet */
 
   aside {
     display: unset;
@@ -459,6 +498,8 @@ h3 {
     grid-column: span 7;
     grid-row-start: 8;
   }
+
+  /* Footer */
 
   .footer {
     grid-row-start: 10;
@@ -469,10 +510,7 @@ h3 {
     padding: 30px 50px 60px 50px;
   }
 
-  .sidebar1 {
-    grid-column: 8 / span 10;
-    grid-row: 3;
-  }
+  /* Main article text content */
 
   .main-content1 {
     grid-row: 3;
@@ -498,6 +536,13 @@ h3 {
     margin-top: 4.5em;
   }
 
+  /* Author (first) sidebar links */
+
+  .sidebar1 {
+    grid-column: 8 / span 10;
+    grid-row: 3;
+  }
+
   .side-links {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(8, auto);
@@ -518,6 +563,8 @@ h3 {
     padding: 2em 0;
     margin: 0 4em;
   }
+
+  /* Site navigation (second) sidebar links */
 
   .sidebar2 {
     background-color: rgba(138,188,159,0.6);

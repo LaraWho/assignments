@@ -6,7 +6,7 @@ import Footer from './Footer';
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className="whole-page">
         <Header />
         <BlogList />
         <Footer />

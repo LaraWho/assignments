@@ -4,50 +4,56 @@
   width: 100%;
   font-weight: bold;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-around;
   color: #333;
   background-color: #fff;
   padding: 20px;
 
-  @include desktop {
-  }
+  // @include desktop {
+  // }
 
   h2 {
     font-size: 22px;
-    margin-right: 80px; 
   }
 
   h3 {
     color: #333;
     cursor: pointer;
-
-    @include desktop {
-      // display: none;
-    }
   }
   
   ul {
-    display: flex;
-      // display: none;
-    @include desktop {
-    }
+    transition: all 0.5s linear;
+    padding: 20px;
+    // @include flexSetUp(center, baseline, column);
+    text-align: left;
 
-  }
+    // @include desktop {
+    // }
 
-  li {
-    text-transform: uppercase;
-    margin-left: 50px; 
-    font-size: 12px;
   }
 
   .open {
-    @include flexSetUp(center, baseline, column);
-    height: 200px;
+    display: block;
+    height: auto;
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    top: 60px;
+    // visibility: visible;
+  }
+  
+  li {
+    text-transform: uppercase;
+    padding-left: 50px; 
+    font-size: 12px;
   }
 
-  .closed {
+  .closed > li {
+    // visibility: hidden;
     height: 0;
+    overflow: hidden;
+    display: none;
   }
   
 }

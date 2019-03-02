@@ -4,11 +4,11 @@ import { withToggler } from './Toggler';
 const Navbar = ({open, toggle}) => {
   console.log(open)
   return (
-  <div>
+  // <div>
     <div className="navbar">
       <h2>Start Bootstrap</h2>
       <h3 onClick={toggle}>MENU</h3>
-    </div>
+    {/* </div> */}
       <ul className={open ? "open" : "closed"}>
         <li>home</li>
         <li>about</li>
