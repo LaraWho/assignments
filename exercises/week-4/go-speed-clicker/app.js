@@ -23,7 +23,6 @@ savedClicks.style.color = "rgb(209, 104, 104)"
 let btn2 = document.createElement("button")
 btn2.textContent = "refresh page!"
 
-
 //function to count clicks, add it to local storage, and display it
 let count = 0;
 countClick = (e) => {
