@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import UglyThings from './UglyThings';
 import { withState } from '../shared/MyState';
 
 class Form extends Component {
@@ -7,55 +6,35 @@ class Form extends Component {
     super(props)
 
     this.state = {
-      inputs: {
         title: '',
         description: '',
-        img: ''
-      },
-      uglyThings: []
+        imgURL: ''
     }
   }
 
-  componentDidMount() {
-    this.setState({
-      uglyThings: JSON.parse(localStorage.uglyThings)
-    })
-  }
-
   handleChange = (e) => {
-    const { name, value } = e.target
-    this.setState(prevState => ({
-      inputs: {
-        ...prevState.inputs,
-        [name]: value
-      }
-    }))
-  }
-
-  addUgly = (e) => {
-    e.preventDefault()
-    this.setState(prevState => ({
-      uglyThings: [prevState.inputs, ...prevState.uglyThings]
-    }), () => localStorage.uglyThings = JSON.stringify(this.state.uglyThings))
-  }
-
-  render() {
-    console.log(this.props)
-    let mapped = this.state.uglyThings.map((el, i) => {
-      return <UglyThings key={el+i} uglyThing={el}/>
+    this.setState({
+        [e.target.name]: e.target.value
     })
+  }
 
+  handleSubmit = (e) => {
+    e.preventDefault()
+    this.props.type === "edit" ? this.props.editBeauty(this.state) : this.props.addBeauty(this.props.beautifulThing.id, this.state)
+  }
+
+  
+  render() {
+    console.log(this.props.button)
     return (
     <div>
-      <form name="ugly_form" onSubmit={this.addUgly}>
+      <form name="beauty_form" onSubmit={this.handleSubmit}>
         <input type="text" name="title" onChange={this.handleChange}/>
         <input type="text" name="description" onChange={this.handleChange}/>
-        <input type="text" name="img" id="" onChange={this.handleChange}/>
-        <button>add ugly thing</button>
+        <input type="text" name="imgURL" onChange={this.handleChange}/>
+        <button>{this.props.button}</button>
       </form>
-      <div className="whole-page">
-        {mapped}
-      </div>
+      
     </div>
     );
   }
