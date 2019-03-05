@@ -20,11 +20,11 @@ class BeautifulThing extends Component {
       const { title, imgUrl, description} = this.props.beautifulThing
       return (
         
-        <div>
+        <div className="beautiful-thing">
         {this.state.toggle ? 
           <Form button="save" type="edit" beauty={this.props.beautifulThing}/>
             :
-        <div className="beautiful-thing">
+          <div className="beautiful-thing">
             <h1>{title}</h1>
             <img src={imgUrl} alt={title} />
             <h1>{description}</h1>

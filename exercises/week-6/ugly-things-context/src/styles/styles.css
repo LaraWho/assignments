@@ -12,8 +12,16 @@
   align-items: center;
   justify-content: center;
   flex: 30%;
+  border: 2px solid blue;
 }
 
 img {
   width: 80%;
+}
+
+form {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -24,7 +24,6 @@ class Form extends Component {
   }
   
   render() {
-    console.log(this.props.beauty)
 
     return (
       <form name="beauty_form" onSubmit={this.handleSubmit}>
