@@ -21,7 +21,7 @@ class MyState extends Component {
   addBeauty = newBeauty => {
     axios.post('https://api.vschool.io/lara/todo', newBeauty).then(res => {
       this.setState(prevState => ({
-        beautifulThings: [...prevState.beautifulThings, res.data],
+        beautifulThings: [res.data, ...prevState.beautifulThings],
       }))
     })
   }
@@ -30,7 +30,7 @@ class MyState extends Component {
     axios.delete(`https://api.vschool.io/lara/todo/${id}`).then(res => {
       this.setState(prevState => ({
         beautifulThings: prevState.beautifulThings.filter(beauty => {
-          return beauty.id !== id
+          return beauty._id !== id
         })
       }))
     })
@@ -39,7 +39,9 @@ class MyState extends Component {
   editBeauty = (id, newBeauty) => {
     axios.put(`https://api.vschool.io/lara/todo/${id}`, newBeauty).then(res => {
       this.setState(prevState => ({
-        uglyThings: [...prevState, res.data]
+        beautifulThings: prevState.beautifulThings.map(beauty => {
+          return beauty._id === id ? beauty = newBeauty : beauty
+        })
       }))
     })
   }

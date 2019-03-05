@@ -17,16 +17,18 @@ class BeautifulThing extends Component {
     }))
   }
     render() {
+      const { title, imgUrl, description} = this.props.beautifulThing
       return (
+        
         <div>
         {this.state.toggle ? 
-          <Form button="save" type="edit"/>
+          <Form button="save" type="edit" beauty={this.props.beautifulThing}/>
             :
         <div className="beautiful-thing">
-            <h1>{this.props.beautifulThing.title}</h1>
-            <img src={this.props.beautifulThing.imgUrl} alt={this.props.beautifulThing.title} />
-            <h1>{this.props.beautifulThing.description}</h1>
-            <button onClick={() => this.props.deleteBeauty(this.props.beautifulThing.id)}>delete</button>
+            <h1>{title}</h1>
+            <img src={imgUrl} alt={title} />
+            <h1>{description}</h1>
+            <button onClick={() => this.props.deleteBeauty(this.props.beautifulThing._id)}>delete</button>
             <button onClick={this.toggleForm}>edit</button> 
           </div>
         }

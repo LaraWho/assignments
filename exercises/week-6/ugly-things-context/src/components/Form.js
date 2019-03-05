@@ -20,23 +20,20 @@ class Form extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    this.props.type === "edit" ? this.props.editBeauty(this.state) : this.props.addBeauty(this.props.beautifulThing.id, this.state)
+    this.props.type === "add" ? this.props.addBeauty(this.state) : this.props.editBeauty(this.props.beauty._id, this.state)
   }
-
   
   render() {
-    console.log(this.props.button)
+    console.log(this.props.beauty)
+
     return (
-    <div>
       <form name="beauty_form" onSubmit={this.handleSubmit}>
-        <input type="text" name="title" onChange={this.handleChange}/>
-        <input type="text" name="description" onChange={this.handleChange}/>
-        <input type="text" name="imgURL" onChange={this.handleChange}/>
+        <input type="text" value={this.state.title} name="title" onChange={this.handleChange}/>
+        <input type="text" value={this.state.description} name="description" onChange={this.handleChange}/>
+        <input type="text" value={this.state.imgURL} name="imgURL" onChange={this.handleChange}/>
         <button>{this.props.button}</button>
       </form>
-      
-    </div>
-    );
+      );
   }
 }
 

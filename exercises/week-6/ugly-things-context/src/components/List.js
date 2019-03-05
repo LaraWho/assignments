@@ -3,14 +3,13 @@ import BeautifulThing from './BeautifulThing';
 import { withState } from '../shared/MyState';
 
 class List extends Component {
-
   componentDidMount() {
     this.props.getBeauty()
   }
 
   render() {
-    let mapped = this.props.beautifulThings.map((beauty, i) => {
-      return <BeautifulThing key={i+beauty.title} beautifulThing={beauty}/>
+    let mapped = this.props.beautifulThings.map((beauty) => {
+      return <BeautifulThing key={beauty._id} beautifulThing={beauty}/>
     })
 
     return (
@@ -20,5 +19,4 @@ class List extends Component {
     );
   }
 }
-
 export default withState(List);
