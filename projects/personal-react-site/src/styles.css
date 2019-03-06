@@ -1,11 +1,66 @@
-.colours {
+/* Colors in ColorDetail.js */
+.colors {
   text-align: center;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
   align-content: center;
+  margin: 20px;
 }
-img {
+
+.color-box {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  box-shadow: 2px 2px 2px #333, -1px -1px 1px #333;
+  color: #FFF;
+  text-shadow: 1px 1px 1px #333, -1px -1px 1px #333;
+  padding-bottom: 20px;
+  font-weight: bold;
+}
+.color-box > p {
+  margin: 5px;
+}
+
+/* Div in ReturnedList.js containing the image and the ColorDetail.js component */
+.returned-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.returned-list > img {
   height: 400px;
+  margin: 20px;
+  box-shadow: 2px 2px 2px #333, -1px -1px 1px #333;
+}
+
+/* .bg-img {
+  background-image: url('./assets/splat.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position-x: start;
+  transform: translate(40%, -40%);
+  height: 70vh;
+} */
+
+
+/* UploadForm.js */
+.upload-form {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.upload-form > form {
+  display: flex;
+  flex-direction: column;
+}
+.upload-form > form > input, button {
+  margin: 10px;
 }

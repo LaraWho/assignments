@@ -5,7 +5,7 @@ import NavBar from './components/NavBar';
 import ReturnedColours from './components/ReturnedColours';
 import UploadForm from './components/UploadForm';
 import SavedList from './components/SavedList';
-import ColourDetail from './components/ColourDetail';
+import ColorDetail from './components/ColorDetail';
 
 class App extends Component {
   // constructor() {
@@ -14,13 +14,14 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+
+      <div className="bg-img">
         <NavBar />
         <Switch>
           <Route exact path="/" component={UploadForm} />
-          <Route path="/list" component={ReturnedColours}/>
-          <Route exact path="/saved" component={SavedList}/>
-          <Route path="/saved/:id" component={ColourDetail}/>
+          <Route path="/api/list" component={ReturnedColours}/>
+          <Route exact path="/api/saved" component={SavedList}/>
+          <Route path="/api/saved/:id" component={ColorDetail}/>
         </Switch>
       </div>
     );

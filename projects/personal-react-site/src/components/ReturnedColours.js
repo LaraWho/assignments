@@ -1,17 +1,16 @@
 import React, { Component } from 'react';
 import { withState } from '../MyState';
-import ColourDetail from './ColourDetail';
+import ColorDetail from './ColorDetail';
 
 class ReturnedColours extends Component {
-  // constructor(props) {
-  //   super(props)
-  // }
+ 
   render() {
-   
+   const { imgURL, scheme } = this.props
     return (
-      <div>
-        <img src={this.props.imgURL} alt=""/>
-        <ColourDetail />
+      <div className="returned-list">
+        <button onClick={() => this.props.saveScheme(imgURL, scheme)}>save</button>
+        <img src={imgURL} alt=""/>
+        <ColorDetail />
       </div>
     );
   }

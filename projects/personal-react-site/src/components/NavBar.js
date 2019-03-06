@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { withState } from '../MyState';
 
-const NavBar = () => {
+class NavBar extends Component {
+
+
+  render() {
   return (
     <div>
-      
+      {/* onclick see collection */}
+      <button onClick={this.props.seeCollection}>fnjf</button>
     </div>
   );
+}
 };
 
-export default NavBar;
+export default withState(NavBar);
