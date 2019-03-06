@@ -1,3 +1,26 @@
+.nav {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav > a {
+  color: #EDEDED;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.whole-page {
+  width: 100%;
+  background-color: #EDEDED;
+  text-align: center;
+}
+
 /* Colors in ColorDetail.js */
 .colors {
   text-align: center;
@@ -6,17 +29,17 @@
   flex-direction: row;
   justify-content: center;
   align-content: center;
-  margin: 20px;
 }
 
+/* Individual colours */
 .color-box {
-  width: 200px;
+  width: 50%;
   height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  box-shadow: 2px 2px 2px #333, -1px -1px 1px #333;
+  /* box-shadow: 2px 2px 2px #333, -1px -1px 1px #333; */
   color: #FFF;
   text-shadow: 1px 1px 1px #333, -1px -1px 1px #333;
   padding-bottom: 20px;
@@ -24,6 +47,16 @@
 }
 .color-box > p {
   margin: 5px;
+}
+
+/* Adding a curve to create a bottom nav bar */
+
+.color-box:last-child {
+  border-bottom-right-radius: 50% 25%;
+}
+
+.color-box:nth-last-child(2) {
+  border-bottom-left-radius: 50% 25%;
 }
 
 /* Div in ReturnedList.js containing the image and the ColorDetail.js component */
@@ -34,20 +67,14 @@
 }
 
 .returned-list > img {
-  height: 400px;
-  margin: 20px;
-  box-shadow: 2px 2px 2px #333, -1px -1px 1px #333;
+  width: 100%;
 }
 
-/* .bg-img {
-  background-image: url('./assets/splat.svg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-position-x: start;
-  transform: translate(40%, -40%);
-  height: 70vh;
-} */
-
+.returned-list > button {
+  width: 100%;
+  margin: 0;
+  border-radius: 0;
+}
 
 /* UploadForm.js */
 .upload-form {
@@ -55,12 +82,94 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url('./assets/splat.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.upload-form > form > h1 {
+  color: #ededed;
+  font-size: 42px;
+  margin-bottom: 0px;
+}
+
+.upload-form > form > label {
+  color: #748FA0;
+  font-size: 22px;
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+
+.upload-form > form > p {
+  margin: 10px;
+  font-weight: bold;
+  color: #EDEDED;
+  font-size: 20px;
 }
 
 .upload-form > form {
   display: flex;
   flex-direction: column;
+  width: 60%;
 }
 .upload-form > form > input, button {
   margin: 10px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 1px rgb(91, 116, 131);
+  border: none;
+  font-size: 22px;
+  padding: 8px;
+}
+
+input {
+  border: 1px solid #748FA0;
+  color: #073C5F;
+  padding-left: 12px;
+  background-color: #ededed;
+}
+
+input:focus, button:focus {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  background-color: #748FA0;
+  color: #FFF;
+}
+
+button:hover {
+  /* opacity: 0.8; */
+  box-shadow: 2px 2px 2px rgb(1, 21, 34);
+}
+
+@media (min-width: 570px) {
+  /* .nav {
+    height: 200px;
+    transform: translateY(-70px);
+  } */
+
+  .colors {
+    width: 100%;
+  }
+  
+  .color-box {
+    width: 33.33%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .color-box {
+    width: 50%;
+  }
+  .color-box:nth-child(2) {
+    transform: skew(0deg, -10deg);
+    transform-origin: left;
+  }
+
+  .color-box:nth-child(2) > p {
+    transform: skew(-10deg, 10deg);
+  }
+
 }

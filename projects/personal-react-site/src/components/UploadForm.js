@@ -22,11 +22,17 @@ class UploadForm extends Component {
   }
   
   render() {
-    console.log()
     return (
-      <div className="upload-form" onSubmit={this.handleSubmit}>
-        <form>
+      <div className="upload-form" >
+        <form onSubmit={this.handleSubmit}>
+          <h1>colour curiosity</h1>
+          <p>add a URL in the top box, please</p>
+          <label>image URL</label>
           <input name="imgURL" value={this.state.imgURL} type="text" onChange={this.handleChange}/>
+          
+          <p> or </p>
+
+          <label>own image</label>
           <input type="text"/>
           <button>upload</button>
         </form>
