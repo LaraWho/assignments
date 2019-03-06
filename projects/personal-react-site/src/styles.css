@@ -9,6 +9,14 @@
 .nav > a {
   color: #EDEDED;
   width: 100%;
+  font-weight: bold;
+  font-size: 22px;
+  letter-spacing: 1px;
+  transition: all .3s ease;
+}
+
+.nav > a:hover {
+  color: #073C5F;
 }
 
 a {
@@ -19,6 +27,8 @@ a {
   width: 100%;
   background-color: #EDEDED;
   text-align: center;
+  font-family: 'Paytone One', sans-serif;
+  letter-spacing: 1px;
 }
 
 /* Colors in ColorDetail.js */
@@ -47,6 +57,7 @@ a {
 }
 .color-box > p {
   margin: 5px;
+  letter-spacing: 3px;
 }
 
 /* Adding a curve to create a bottom nav bar */
@@ -92,6 +103,7 @@ a {
   color: #ededed;
   font-size: 42px;
   margin-bottom: 0px;
+  letter-spacing: 4px;
 }
 
 .upload-form > form > label {
@@ -106,6 +118,7 @@ a {
   font-weight: bold;
   color: #EDEDED;
   font-size: 20px;
+  letter-spacing: 1px;
 }
 
 .upload-form > form {
@@ -114,19 +127,26 @@ a {
   width: 60%;
 }
 .upload-form > form > input, button {
+  font-family: 'Paytone One', sans-serif;
   margin: 10px;
   border-radius: 20px;
-  box-shadow: 1px 1px 1px rgb(91, 116, 131);
+  /* box-shadow: 1px 1px 1px rgb(91, 116, 131); */
   border: none;
   font-size: 22px;
   padding: 8px;
+  border: 3px solid #748FA0;
 }
 
 input {
-  border: 1px solid #748FA0;
   color: #073C5F;
   padding-left: 12px;
   background-color: #ededed;
+  text-align: center;
+  transition: all .3s ease;
+}
+
+input:hover {
+  opacity: 0.95;
 }
 
 input:focus, button:focus {
@@ -137,11 +157,12 @@ button {
   cursor: pointer;
   background-color: #748FA0;
   color: #FFF;
+  letter-spacing: 1px;
+  transition: all .3s ease;
 }
 
 button:hover {
-  /* opacity: 0.8; */
-  box-shadow: 2px 2px 2px rgb(1, 21, 34);
+  background-color: #073C5F;
 }
 
 @media (min-width: 570px) {

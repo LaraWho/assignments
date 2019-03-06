@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './styles.css';
 import { Switch, Route } from 'react-router-dom';
-import NavBar from './components/NavBar';
+// import NavBar from './components/NavBar';
 import ReturnedColours from './components/ReturnedColours';
 import UploadForm from './components/UploadForm';
 // import SavedList from './components/SavedList';
