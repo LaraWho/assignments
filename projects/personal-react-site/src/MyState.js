@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-// import colours from './colours.json';
+import colours from './colours.json';
+// import axios from 'axios';
 let unirest = require('unirest');
 const { Provider, Consumer } = React.createContext()
 
@@ -8,9 +9,9 @@ class MyState extends Component {
     super()
 
     this.state = {
-      scheme: [],
+      scheme: colours,
       savedSchemes: [],
-      imgURL: '',
+      imgURL: 'https://cdn-images-1.medium.com/max/1600/1*U0erqg3KNPmEogeu-BqbuA.jpeg',
       loaded: false
       
     }

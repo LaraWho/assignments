@@ -1,14 +1,17 @@
 import React from 'react';
-// import { withState } from '../MyState';
 import { Link } from 'react-router-dom';
+import { withState } from '../MyState';
 
-const NavBar = () => {
+const NavBar = (props) => {
   
+  const { imgURL, scheme } = props
   return (
+
     <div className="nav">
       <Link to="/">home</Link>
+       <h2 onClick={() => props.saveScheme(imgURL, scheme)}>save these colours</h2>
     </div>
   )
 }
 
-export default NavBar;
+export default withState(NavBar);

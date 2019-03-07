@@ -12,7 +12,6 @@ class ReturnedColours extends Component {
       <div className="returned-list" style={{backgroundColor: scheme[1].color}}>
         <img src={imgURL} alt=""/>
         <ColorDetail />
-        {/* <button style={{backgroundColor: scheme[0].color}}  onClick={() => this.props.saveScheme(imgURL, scheme)}>save these colours</button> */}
       <NavBar />
       </div>
 

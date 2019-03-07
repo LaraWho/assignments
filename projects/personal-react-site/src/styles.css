@@ -1,34 +1,14 @@
-
-/* Text on loading screen */
-.loading > h1 {
-  color: #EDEDED;
-  width: 50%;
-  /* transition: loading 2s infinite; */
-}
-/* 
-@keyframes loading {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-} */
-
-
 /* Navbar component */
 .nav {
   height: 80px;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
-.nav > a {
+.nav > a, h2 {
+  cursor: pointer;
   color: #EDEDED;
   text-shadow: 1px 1px 1px #073C5F, -1px -1px 1px #073C5F;
   font-weight: bold;
@@ -38,6 +18,11 @@
 }
 
 .nav > a:hover {
+  color: #073C5F;
+  text-shadow: none;
+}
+
+.nav > h2:hover {
   color: #073C5F;
   text-shadow: none;
 }
@@ -190,7 +175,7 @@ button:hover {
 }
 
 @media (min-width: 570px) {
-  
+
   .colors {
     width: 100%;
   }
@@ -208,5 +193,21 @@ button:hover {
   .color-box:nth-child(2) > p {
     transform: skew(-10deg, 10deg);
   }
+
+  .returned-list {
+    overflow: hidden;
+  }
+
+}
+
+@media (min-width: 750px) {
+
+  .returned-list > img {
+    height: 100vh;
+    width: auto;
+  }
+
+  /* add styling to make image and boxes sit side by side in desktop view */
+  
 
 }
