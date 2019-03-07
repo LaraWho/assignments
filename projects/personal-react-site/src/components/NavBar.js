@@ -1,16 +1,14 @@
-import React, { Component } from 'react';
-import { withState } from '../MyState';
+import React from 'react';
+// import { withState } from '../MyState';
 import { Link } from 'react-router-dom';
 
-class NavBar extends Component {
+const NavBar = () => {
   
-  render() {
   return (
     <div className="nav">
       <Link to="/">home</Link>
     </div>
-  );
+  )
 }
-};
 
-export default withState(NavBar);
+export default NavBar;

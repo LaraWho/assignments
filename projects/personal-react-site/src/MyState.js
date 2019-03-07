@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import colours from './colours.json';
+// import colours from './colours.json';
 let unirest = require('unirest');
 const { Provider, Consumer } = React.createContext()
 
@@ -8,12 +8,14 @@ class MyState extends Component {
     super()
 
     this.state = {
-      scheme: colours,
+      scheme: [],
       savedSchemes: [],
-      imgURL: 'https://cdn-images-1.medium.com/max/1600/1*U0erqg3KNPmEogeu-BqbuA.jpeg'
+      imgURL: '',
+      loaded: false
       
     }
   }
+  // https://cdn-images-1.medium.com/max/1600/1*U0erqg3KNPmEogeu-BqbuA.jpeg
 
   // seeCollection = () => {
   //   let item = localStorage.schemes
@@ -29,6 +31,7 @@ class MyState extends Component {
       .end((res) => {
         this.setState({
           scheme: res.body.tags,
+          loaded: true,
           imgURL
         })
       });
@@ -55,14 +58,10 @@ class MyState extends Component {
       
       
       render() {
-        console.log(this.state.savedSchemes)
         return (
       <Provider value={{
         getURLScheme: this.getURLScheme,
-        getIMGScheme: this.getIMGScheme,
         saveScheme: this.saveScheme,
-        seeColors: this.seeColors,
-        seeCollection: this.seeCollection,
         ...this.state
       }}>
         {this.props.children}

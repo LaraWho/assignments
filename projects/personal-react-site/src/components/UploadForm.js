@@ -5,7 +5,7 @@ class UploadForm extends Component {
   constructor() {
     super()
     this.state = {
-      imgURL: ''
+      imgURL: ''    
     }
   }
 
@@ -18,8 +18,13 @@ class UploadForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
     this.props.getURLScheme(this.state.imgURL)
-    this.props.history.push('/api/list')
+    this.help()
   }
+
+  help = () => {
+    return !this.props.loaded ? this.props.history.push('/api/list') : null
+  }
+
   
   render() {
     return (
@@ -29,11 +34,13 @@ class UploadForm extends Component {
           <p>add a URL in the top box, please</p>
           <label>image URL</label>
           <input name="imgURL" value={this.state.imgURL} type="text" onChange={this.handleChange}/>
-          
+{/*           
           <p> or </p>
 
           <label>own image</label>
-          <input type="text"/>
+          <input name="file" type="file"
+            class="file-upload" data-cloudinary-field="image_id"
+            data-form-data="{ 'transformation': {'crop':'limit','tags':'samples','width':3000,'height':2000}}"/> */}
           <button>upload</button>
         </form>
       </div>

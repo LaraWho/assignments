@@ -1,3 +1,23 @@
+
+/* Text on loading screen */
+.loading > h1 {
+  color: #EDEDED;
+  width: 50%;
+  /* transition: loading 2s infinite; */
+}
+/* 
+@keyframes loading {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+} */
+
 .nav {
   height: 80px;
   width: 100%;
@@ -6,8 +26,14 @@
   align-items: center;
 }
 
+.nav::before {
+  transform-origin: top;
+  transform: skewY(20deg);
+}
+
 .nav > a {
   color: #EDEDED;
+  text-shadow: 1px 1px 1px #073C5F, -1px -1px 1px #073C5F;
   width: 100%;
   font-weight: bold;
   font-size: 22px;
@@ -17,6 +43,7 @@
 
 .nav > a:hover {
   color: #073C5F;
+  text-shadow: none;
 }
 
 a {
@@ -49,26 +76,25 @@ a {
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  /* box-shadow: 2px 2px 2px #333, -1px -1px 1px #333; */
-  color: #FFF;
-  text-shadow: 1px 1px 1px #333, -1px -1px 1px #333;
+  color: #EDEDED;
   padding-bottom: 20px;
   font-weight: bold;
 }
 .color-box > p {
+  text-shadow: 1px 1px 1px #073C5F, -1px -1px 1px #073C5F;
   margin: 5px;
   letter-spacing: 3px;
 }
 
 /* Adding a curve to create a bottom nav bar */
 
-.color-box:last-child {
+/* .color-box:last-child {
   border-bottom-right-radius: 50% 25%;
 }
 
 .color-box:nth-last-child(2) {
   border-bottom-left-radius: 50% 25%;
-}
+} */
 
 /* Div in ReturnedList.js containing the image and the ColorDetail.js component */
 .returned-list {
@@ -93,10 +119,9 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('./assets/splat.svg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: center no-repeat/cover url('./assets/splat.svg');
+  -webkit-transition: background 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: background 1s ease-in-out;
 }
 
 .upload-form > form > h1 {
@@ -104,6 +129,7 @@ a {
   font-size: 42px;
   margin-bottom: 0px;
   letter-spacing: 4px;
+  text-shadow: 1px 1px 1px #073C5F, -1px -1px 1px #073C5F;
 }
 
 .upload-form > form > label {
@@ -125,7 +151,9 @@ a {
   display: flex;
   flex-direction: column;
   width: 60%;
+  transition: all 1s ease-in-out;
 }
+
 .upload-form > form > input, button {
   font-family: 'Paytone One', sans-serif;
   margin: 10px;
@@ -165,22 +193,21 @@ button:hover {
   background-color: #073C5F;
 }
 
-@media (min-width: 570px) {
-  /* .nav {
-    height: 200px;
-    transform: translateY(-70px);
-  } */
+/* If the array of colours is an odd number, add this styling so the last item spans the width of the page */
 
+/* .color-box:last-child {
+  width: 100%;
+} */
+.two:last-child {
+  width: 100%;
+}
+
+@media (min-width: 570px) {
+  
   .colors {
     width: 100%;
   }
-  
-  .color-box {
-    width: 33.33%;
-  }
-}
 
-@media (min-width: 1000px) {
   .color-box {
     width: 50%;
   }
