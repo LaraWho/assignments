@@ -18,6 +18,8 @@
   }
 } */
 
+
+/* Navbar component */
 .nav {
   height: 80px;
   width: 100%;
@@ -50,6 +52,7 @@ a {
   text-decoration: none;
 }
 
+/* The div which contains everything */
 .whole-page {
   width: 100%;
   background-color: #EDEDED;
@@ -68,7 +71,7 @@ a {
   align-content: center;
 }
 
-/* Individual colours */
+/* Individual colour boxes */
 .color-box {
   width: 50%;
   height: 200px;
@@ -80,23 +83,14 @@ a {
   padding-bottom: 20px;
   font-weight: bold;
 }
+
 .color-box > p {
   text-shadow: 1px 1px 1px #073C5F, -1px -1px 1px #073C5F;
   margin: 5px;
   letter-spacing: 3px;
 }
 
-/* Adding a curve to create a bottom nav bar */
-
-/* .color-box:last-child {
-  border-bottom-right-radius: 50% 25%;
-}
-
-.color-box:nth-last-child(2) {
-  border-bottom-left-radius: 50% 25%;
-} */
-
-/* Div in ReturnedList.js containing the image and the ColorDetail.js component */
+/* Div in ReturnedList.js containing the image input by the user and the ColorDetail.js component */
 .returned-list {
   display: flex;
   flex-direction: column;
@@ -158,7 +152,6 @@ a {
   font-family: 'Paytone One', sans-serif;
   margin: 10px;
   border-radius: 20px;
-  /* box-shadow: 1px 1px 1px rgb(91, 116, 131); */
   border: none;
   font-size: 22px;
   padding: 8px;
@@ -211,6 +204,8 @@ button:hover {
   .color-box {
     width: 50%;
   }
+
+  /*  Adding a skew effect to the second box of colour */
   .color-box:nth-child(2) {
     transform: skew(0deg, -10deg);
     transform-origin: left;
