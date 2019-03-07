@@ -28,15 +28,9 @@
   align-items: center;
 }
 
-.nav::before {
-  transform-origin: top;
-  transform: skewY(20deg);
-}
-
 .nav > a {
   color: #EDEDED;
   text-shadow: 1px 1px 1px #073C5F, -1px -1px 1px #073C5F;
-  width: 100%;
   font-weight: bold;
   font-size: 22px;
   letter-spacing: 1px;
