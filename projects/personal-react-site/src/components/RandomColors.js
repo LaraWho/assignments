@@ -1,55 +1,46 @@
 import React, {Component} from 'react';
-import { withState } from '../MyState';
-// import splat from '../assets/mini-splat.svg'
+import axios from 'axios';
+
 
 class RandomColors extends Component {
-
   constructor() {
     super()
+
     this.state = {
-      box1: '#' +  Math.random().toString(16).substr(-6),
-      box2: '#' +  Math.random().toString(16).substr(-6),
-      box3: '#' +  Math.random().toString(16).substr(-6),
-      box4: '#' +  Math.random().toString(16).substr(-6),
-      box5: '#' +  Math.random().toString(16).substr(-6),
-      box6: '#' +  Math.random().toString(16).substr(-6)
+      colors: []
     }
   }
- 
-  randomise = () => {
-    this.setState({
-      box1: '#' +  Math.random().toString(16).substr(-6),
-      box2: '#' +  Math.random().toString(16).substr(-6),
-      box3: '#' +  Math.random().toString(16).substr(-6),
-      box4: '#' +  Math.random().toString(16).substr(-6),
-      box5: '#' +  Math.random().toString(16).substr(-6),
-      box6: '#' +  Math.random().toString(16).substr(-6)
+
+  componentDidMount() {
+    this.getRandom()
+  }
+
+
+  getRandom = () => {
+    axios.get("http://www.colr.org/json/colors/random/7").then(res => {
+      this.setState({
+        colors: res.data.matching_colors
+      })
     })
   }
 
   render() {
+    let mapped = this.state.colors.map((color, i) => {
+      return  <div className="random-color" key={color+i} style={{backgroundColor: !color ? '#748FA0' : `#${color}`}}>
+                <p>{!color ? '#748FA0' : `#${color}`}</p>
+              </div>
+    })
     
   return (
-    <div className="colors" style={{backgroundColor: this.state.box2, paddingBottom: "14px"}}>
-      <div className="color-box" style={{backgroundColor: this.state.box1}}>
-      <p>{this.state.box1}</p></div>
-      <div className="color-box" style={{backgroundColor: this.state.box2}}>
-      <p>{this.state.box2}</p></div>
-      <div className="color-box" style={{backgroundColor: this.state.box3}}>
-      <p>{this.state.box3}</p></div>
-      <div className="color-box" style={{backgroundColor: this.state.box4}}>
-      <p>{this.state.box4}</p></div>
-      <div className="color-box" style={{backgroundColor: this.state.box5}}>
-      <p>{this.state.box5}</p></div>
-      <div className="color-box" style={{backgroundColor: this.state.box6}}>
-      <p>{this.state.box6}</p></div>
+    <div className="colors random-colors">
       <div className="nav">
         <h2 onClick={() => this.props.history.push("/")}>home</h2>
-        <h2 onClick={this.randomise}>randomise</h2>
+        <h2 onClick={this.getRandom}>randomise</h2>
       </div>
+    {mapped}
     </div>
   );  
   }
 };
 
-export default withState(RandomColors);
+export default RandomColors;

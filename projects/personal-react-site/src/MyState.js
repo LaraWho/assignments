@@ -28,13 +28,13 @@ class MyState extends Component {
       });
   }
 
-  saveScheme = (imgURL, scheme, id) => {
-    this.setState(prevState => ({
-      savedSchemes: [{imgURL, scheme, id}, ...prevState.savedSchemes]
-    }), () => {
-      localStorage.schemes = JSON.stringify(this.state.savedSchemes)
-    })
-  }
+  // saveScheme = (imgURL, scheme, id) => {
+  //   this.setState(prevState => ({
+  //     savedSchemes: [{imgURL, scheme, id}, ...prevState.savedSchemes]
+  //   }), () => {
+  //     localStorage.schemes = JSON.stringify(this.state.savedSchemes)
+  //   })
+  // }
 
   // seeCollection = () => {
   //   let item = localStorage.schemes
@@ -62,7 +62,6 @@ class MyState extends Component {
       <Provider value={{
         getURLScheme: this.getURLScheme,
         saveScheme: this.saveScheme,
-        randomise: this.randomise,
         ...this.state
       }}>
         {this.props.children}

@@ -29,6 +29,26 @@
   transition: opacity 600ms linear;
 }
 
+/*  random color page */
+.random-colors {
+  height: -webkit-fill-available;
+  width: 100vw;
+  /* background-color: #748FA0; */
+  background: center no-repeat/cover url('./assets/mini-splat.svg');
+}
+
+.random-color {
+  height: 200px;
+  width: 200px;
+}
+
+.random-color > p {
+  color: #EDEDED;
+  text-shadow: 1px 1px 1px #073C5F, -1px -1px 1px #073C5F;
+  margin: 5px;
+  letter-spacing: 3px;
+}
+
 /* Navbar component */
 .nav {
   height: 80px;

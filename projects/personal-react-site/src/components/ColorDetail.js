@@ -5,12 +5,12 @@ class ColorDetail extends Component {
   render() {
     let mappedColours = this.props.scheme.map((el, i) => {
       if(this.props.scheme.length % 2 === 0) {
-        return <div key={el.label+i} style={{backgroundColor: el.color}}          className="color-box">
+        return <div key={el.label+i} style={{backgroundColor: el.color}} className="color-box">
                 <p>{el.label}</p>
                 <p>{el.color}</p>
               </div>
       } else {
-        return <div key={el.label+i} style={{backgroundColor: el.color}}          className="color-box two">
+        return <div key={el.label+i} style={{backgroundColor: el.color}} className="color-box two">
                 <p>{el.label}</p>
                 <p>{el.color}</p>
               </div>
