@@ -31,6 +31,38 @@ a {
   text-decoration: none;
 }
 
+/* splat image link */
+.nav > a:last-child {
+  position: absolute;
+  width: 20% !important;
+  height: auto !important;
+  left: 2%;
+  top: 2%;
+  cursor: pointer;
+  transform: scale(1);
+  filter: drop-shadow(.5px .5px .5px #073C5F);
+  opacity: 0.6;
+  transition: all .5s ease;
+}
+
+.nav > a:last-child:hover {
+  transform: scale(2);
+  opacity: 1;
+}
+
+.splat {
+  position: relative;
+  bottom: 120px;
+  right: 20px;
+  cursor: pointer;
+  transform: scale(1);
+  filter: drop-shadow(1px 1px 1px #073C5F);
+  transition: all .5s ease;
+}
+.splat:hover {
+  transform: scale(2);
+}
+
 /* The div which contains everything */
 .whole-page {
   width: 100%;
@@ -38,6 +70,20 @@ a {
   text-align: center;
   font-family: 'Paytone One', sans-serif;
   letter-spacing: 1px;
+}
+
+.upload-form > img {
+  position: absolute;
+  width: 30%;
+  right: 10%;
+  top: 5%;
+  cursor: pointer;
+  transform: scale(1);
+  transition: all .5s ease;
+}
+
+.upload-form > img:hover {
+  transform: scale(1.1);
 }
 
 /* Colors in ColorDetail.js */
@@ -79,12 +125,12 @@ a {
 .returned-list > img {
   width: 100%;
 }
-
+/* 
 .returned-list > button {
   width: 100%;
   margin: 0;
   border-radius: 0;
-}
+} */
 
 /* UploadForm.js */
 .upload-form {

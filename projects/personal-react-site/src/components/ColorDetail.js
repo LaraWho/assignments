@@ -3,7 +3,6 @@ import { withState } from '../MyState';
 
 class ColorDetail extends Component {
   render() {
-    
     let mappedColours = this.props.scheme.map((el, i) => {
       if(this.props.scheme.length % 2 === 0) {
         return <div key={el.label+i} style={{backgroundColor: el.color}}          className="color-box">
@@ -17,10 +16,9 @@ class ColorDetail extends Component {
               </div>
       }
     })
-
     return (
       <div className="colors">
-        {mappedColours}        
+        {mappedColours} 
       </div>
     );
   }

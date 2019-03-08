@@ -1,30 +1,15 @@
 import React, { Component } from 'react';
 import { withState } from '../MyState';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
-
 
 class SavedList extends Component {
-  // constructor() {
-  //   super()
-  //   this.state = {
-  //     wat: []
-  //   }
-  // }
 
-  // componentDidMount() {
-  //   axios.get('/api/saved').then(res => {
-  //     console.log(res.data)
-  //     this.setState({
-  //       wat: res.data
-  //     })
-  //   })
-  // }
-  
   render() {
-    console.log(this.props.scheme)
-    let mappedArray = this.props.scheme.map(el => {
-      console.log(el)
+    let item = localStorage.schemes
+    let array = JSON.parse(item)
+    let mappedArray = array.map((image, i) => {
+      console.log(image)
+      return <Link to={`/api/saved/${image.id}`} key={image.imgURL+i}><img src={image.imgURL} alt=""/></Link>
     })
     // let mappedArray = this.props.scheme.map(el => {
     //   return el.map((el2, i) => {
@@ -34,7 +19,7 @@ class SavedList extends Component {
 
     // onClick={() => this.props.seeColors(i)}
     return (
-      <div>
+      <div className="saved-list">
         {mappedArray}
       </div>
     );

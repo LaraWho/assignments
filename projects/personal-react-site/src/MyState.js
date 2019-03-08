@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import colours from './colours.json';
-// import axios from 'axios';
+import axios from 'axios';
 let unirest = require('unirest');
 const { Provider, Consumer } = React.createContext()
 
@@ -10,21 +10,12 @@ class MyState extends Component {
 
     this.state = {
       scheme: colours,
-      savedSchemes: [],
+      savedSchemes: colours,
       imgURL: 'https://cdn-images-1.medium.com/max/1600/1*U0erqg3KNPmEogeu-BqbuA.jpeg',
-      loaded: false
-      
+      loaded: true
     }
   }
   // https://cdn-images-1.medium.com/max/1600/1*U0erqg3KNPmEogeu-BqbuA.jpeg
-
-  // seeCollection = () => {
-  //   let item = localStorage.schemes
-  //   let array = JSON.parse(item)
-  //   this.setState(prevState => ({
-  //     savedSchemes: [array, ...prevState.savedSchemes]
-  //   }))
-  // }
 
   getURLScheme = imgURL => {
     unirest.get(`https://apicloud-colortag.p.rapidapi.com/tag-url.json?palette=w3c&sort=weight&url=${imgURL}`)
@@ -38,12 +29,21 @@ class MyState extends Component {
       });
   }
 
-  saveScheme = (imgURL, scheme) => {
+  saveScheme = (imgURL, scheme, id) => {
     this.setState(prevState => ({
-      savedSchemes: [{imgURL, scheme}, ...prevState.savedSchemes]
-    }))
+      savedSchemes: [{imgURL, scheme, id}, ...prevState.savedSchemes]
+    }), () => {
+      localStorage.schemes = JSON.stringify(this.state.savedSchemes)
+    })
   }
-  
+
+  // seeCollection = () => {
+  //   let item = localStorage.schemes
+  //   let array = JSON.parse(item)
+  //   this.setState(prevState => ({
+  //     savedSchemes: [array, ...prevState.savedSchemes]
+  //   }))
+  // }
 
   // POST
   // getIMGScheme = () => {
@@ -59,10 +59,12 @@ class MyState extends Component {
       
       
       render() {
+        // console.log(this.state.scheme[1].color)
         return (
       <Provider value={{
         getURLScheme: this.getURLScheme,
         saveScheme: this.saveScheme,
+        randomise: this.randomise,
         ...this.state
       }}>
         {this.props.children}
