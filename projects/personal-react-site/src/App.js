@@ -1,32 +1,26 @@
 import React, { Component } from 'react';
-import './styles.css';
-import { Switch, Route } from 'react-router-dom';
-// import ReturnedColours from './components/ReturnedColours';
 import UploadForm from './components/UploadForm';
 import Loading from './components/Loading';
-import SavedList from './components/SavedList';
-import ColorDetail from './components/ColorDetail';
-import NavBar from './components/NavBar';
 import RandomColors from './components/RandomColors';
-
-
+import { Switch, Route, withRouter  } from 'react-router-dom';
+import { PageFade } from './transitions';
+import './styles.css';
 
 class App extends Component {
 
   render() {
+    const { location } = this.props
     return (
-
       <div className="whole-page">
-        <Switch>
-          <Route exact path="/" component={UploadForm} />
-          {/* <Route exact path="/api/list" component={ReturnedColours} /> */}
-          <Route path="/api/list" component={Loading} />
-          <Route path="/api/random" component={RandomColors} />
-          {/* <Route exact path="/api/saved" component={SavedList} />
-          <Route path="/api/saved/:id" component={ColorDetail} /> */}
-        </Switch>
+        <PageFade location={location}>
+          <Switch location={location}>
+            <Route exact path="/" component={UploadForm} />
+            <Route path="/api/list" component={Loading} />
+            <Route path="/api/random" component={RandomColors} />
+          </Switch>
+        </PageFade>
       </div>
     );
   }
 }
-export default App;
+export default withRouter(App);

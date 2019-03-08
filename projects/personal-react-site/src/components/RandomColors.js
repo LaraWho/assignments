@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { withState } from '../MyState';
-import splat from '../assets/mini-splat.svg'
+// import splat from '../assets/mini-splat.svg'
 
 class RandomColors extends Component {
 
@@ -30,7 +30,7 @@ class RandomColors extends Component {
   render() {
     
   return (
-    <div className="colors" style={{backgroundColor: this.state.box2}}>
+    <div className="colors" style={{backgroundColor: this.state.box2, paddingBottom: "14px"}}>
       <div className="color-box" style={{backgroundColor: this.state.box1}}>
       <p>{this.state.box1}</p></div>
       <div className="color-box" style={{backgroundColor: this.state.box2}}>
@@ -43,7 +43,10 @@ class RandomColors extends Component {
       <p>{this.state.box5}</p></div>
       <div className="color-box" style={{backgroundColor: this.state.box6}}>
       <p>{this.state.box6}</p></div>
-      <img className="splat" src={splat} onClick={this.randomise}/>
+      <div className="nav">
+        <h2 onClick={() => this.props.history.push("/")}>home</h2>
+        <h2 onClick={this.randomise}>randomise</h2>
+      </div>
     </div>
   );  
   }

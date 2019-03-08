@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import colours from './colours.json';
-import axios from 'axios';
 let unirest = require('unirest');
 const { Provider, Consumer } = React.createContext()
 
@@ -59,7 +58,6 @@ class MyState extends Component {
       
       
       render() {
-        // console.log(this.state.scheme[1].color)
         return (
       <Provider value={{
         getURLScheme: this.getURLScheme,

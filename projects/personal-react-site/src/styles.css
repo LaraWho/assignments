@@ -1,3 +1,34 @@
+/* Page Fade Transition */
+.page-fade-appear {
+  opacity: 0;
+  /* position: absolute; */
+}
+
+.page-fade-appear.page-fade-appear-active {
+  opacity: 1;
+  transition: opacity 600ms linear;
+}
+
+.page-fade-enter {
+  opacity: 0;
+  /* position: absolute; */
+}
+
+.page-fade-enter.page-fade-enter-active {
+  opacity: 1;
+  transition: opacity 600ms linear;
+}
+
+.page-fade-exit {
+  opacity: 1;
+  /* position: absolute; */
+}
+
+.page-fade-exit.page-fade-exit-active {
+  opacity: 0;
+  transition: opacity 600ms linear;
+}
+
 /* Navbar component */
 .nav {
   height: 80px;
