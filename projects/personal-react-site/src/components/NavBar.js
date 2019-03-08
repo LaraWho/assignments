@@ -6,16 +6,16 @@ import splat from '../assets/mini-splat.svg';
 class NavBar extends Component {
  
   render() {
-    const { bgColor } = this.props
+    // const { bgColor } = this.props
+    // style={{backgroundColor: bgColor}}
   return (
 
-    <div className="nav" style={{backgroundColor: bgColor}}>
+    <div className="nav">
       <Link to="/">home</Link>
       <Link to="/api/random"><img src={splat} alt=""/></Link>
     </div>
-  )
-   
-}
+    ) 
+  }
 }
 
 export default withState(NavBar);
