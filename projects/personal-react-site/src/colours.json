@@ -1,53 +1,23 @@
 [
-    {
-      "label": "DarkSlateGray", 
-      "color": "#413C3F"
-    },
-    {
-      "label": "LightSlateGray", 
-      "color": "#88999E"
-    },
-    {
-      "label": "DimGray", 
-      "color": "#3C3E3F"
-    },
-    {
-      "label": "SlateGray", 
-      "color": "#6C7B80"
-    },
-    {
-      "label": "RosyBrown", 
-      "color": "#896F6A"
-    },
-    {
-      "label": "Silver", 
-      "color": "#BABCC0"
-    },
-    {
-      "label": "Black", 
-      "color": "#131417"},
-    {
-      "label": "DarkGray", 
-      "color": "#A2A5A9"
-    },
-    {
-      "label": "Sienna", 
-      "color": "#582624"
-    },
-    {
-      "label": "LightSteelBlue", 
-      "color": "#A9B1B6"
-    },
-    {
-      "label": "SaddleBrown", 
-      "color": "#471918"
-    },
-    {
-      "label": "Maroon", 
-      "color": "#501717"
-    },
-    {
-      "label": "Gainsboro", 
-      "color": "#D9D9DC"
-    }
-]
+  {"label": "LightSteelBlue", 
+    "color": "#A4BFD6"},
+    
+  {"label": "LightSlateGray", 
+    "color": "#7795AF"},
+    
+  {"label": "SlateGray", 
+    "color": "#516E89"},
+    
+  {"label": "DarkSlateGray", 
+    "color": "#314A62"},
+    
+  {"label": "Lavender", 
+    "color": "#CFDFEC"},
+    
+  {"label": "SteelBlue", 
+    "color": "#4C6F92"},
+    
+  {"label": "LightBlue", 
+    "color": "#C6D8E8"}
+
+  ]

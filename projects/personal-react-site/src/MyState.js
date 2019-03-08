@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import colours from './colours.json';
+// import colours from './colours.json';
 let unirest = require('unirest');
 const { Provider, Consumer } = React.createContext()
 
@@ -8,13 +8,13 @@ class MyState extends Component {
     super()
 
     this.state = {
-      scheme: colours,
-      savedSchemes: colours,
-      imgURL: 'https://cdn-images-1.medium.com/max/1600/1*U0erqg3KNPmEogeu-BqbuA.jpeg',
-      loaded: true
+      scheme: [],
+      savedSchemes: [],
+      imgURL: '',
+      loaded: false
     }
   }
-  // https://cdn-images-1.medium.com/max/1600/1*U0erqg3KNPmEogeu-BqbuA.jpeg
+  // https://all4desktop.com/data_images/original/4235049-images-of-love.jpg
 
   getURLScheme = imgURL => {
     unirest.get(`https://apicloud-colortag.p.rapidapi.com/tag-url.json?palette=w3c&sort=weight&url=${imgURL}`)

@@ -6,9 +6,7 @@ import splat from '../assets/mini-splat.svg';
 class NavBar extends Component {
  
   render() {
-    const { imgURL, scheme, bgColor } = this.props
-    let randomNum = Math.floor(Math.random() * 600)
- 
+    const { bgColor } = this.props
   return (
 
     <div className="nav" style={{backgroundColor: bgColor}}>
