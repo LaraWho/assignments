@@ -9,10 +9,10 @@ class MyState extends Component {
 
     this.state = {
       scheme: [],
-      savedSchemes: [
-      ],
+      savedSchemes: [],
       imgURL: '',
-      loaded: false
+      loaded: false,
+      id: (Math.random() * 8).toString(36).substring(2)
     }
   }
   // https://all4desktop.com/data_images/original/4235049-images-of-love.jpg
@@ -42,7 +42,7 @@ class MyState extends Component {
     }
     let array = JSON.parse(item)
     this.setState(prevState => ({
-      savedSchemes: [[this.state.imgURL, this.state.scheme], ...array]
+      savedSchemes: [[this.state.imgURL, this.state.scheme, this.state.id], ...array]
     }), () => {
       localStorage.colorSchemes = JSON.stringify(this.state.savedSchemes)
     })

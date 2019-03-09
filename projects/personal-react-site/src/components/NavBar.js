@@ -4,7 +4,7 @@ import { withState } from '../MyState';
 import splat from '../assets/mini-splat.svg';
 
 class NavBar extends Component {
- 
+
   render() {
   return (
 
