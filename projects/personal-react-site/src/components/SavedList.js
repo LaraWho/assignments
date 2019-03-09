@@ -1,26 +1,27 @@
 import React, { Component } from 'react';
 import { withState } from '../MyState';
-import { Link } from 'react-router-dom';
+import ColorDetail from './ColorDetail';
+import NavBar from './NavBar';
 
 class SavedList extends Component {
 
   render() {
-    let item = localStorage.schemes
+    let item = localStorage.colorSchemes
     let array = JSON.parse(item)
-    let mappedArray = array.map((image, i) => {
-      console.log(image)
-      return <Link to={`/api/saved/${image.id}`} key={image.imgURL+i}><img src={image.imgURL} alt=""/></Link>
-    })
-    // let mappedArray = this.props.scheme.map(el => {
-    //   return el.map((el2, i) => {
-    //     return <Link to={`/api/saved/${i}`} key={el2+i}><div ><img style={{height: '200px', cursor: "pointer"}} src={el2.imgURL} alt="" /></div></Link>
-    //   })
-    // })
+    let lastItem = array[array.length - 1]
+    console.log(array)
+    let mappedArray = array.map((el,i) => {
+      return <div key={i} style={{backgroundColor: el[1][1].color}} >
+                <img src={el[0]} alt=""/> 
+                <ColorDetail toShow="saved" localSchemes={el[1]}/> 
+              </div> 
+        
+      })
 
-    // onClick={() => this.props.seeColors(i)}
     return (
-      <div className="saved-list">
+      <div className="returned-list" style={{backgroundColor: lastItem[1][1].color}} >
         {mappedArray}
+        <NavBar inSaved="true"/>
       </div>
     );
   }

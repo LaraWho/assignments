@@ -1,1 +1,0 @@
-select * from color_app;

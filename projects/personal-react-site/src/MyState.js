@@ -9,7 +9,8 @@ class MyState extends Component {
 
     this.state = {
       scheme: [],
-      savedSchemes: [],
+      savedSchemes: [
+      ],
       imgURL: '',
       loaded: false
     }
@@ -28,21 +29,24 @@ class MyState extends Component {
       });
   }
 
-  // saveScheme = (imgURL, scheme, id) => {
-  //   this.setState(prevState => ({
-  //     savedSchemes: [{imgURL, scheme, id}, ...prevState.savedSchemes]
-  //   }), () => {
-  //     localStorage.schemes = JSON.stringify(this.state.savedSchemes)
-  //   })
-  // }
+  refreshPage = () => {
+    this.setState({
+      loaded: false
+    })
+  }
 
-  // seeCollection = () => {
-  //   let item = localStorage.schemes
-  //   let array = JSON.parse(item)
-  //   this.setState(prevState => ({
-  //     savedSchemes: [array, ...prevState.savedSchemes]
-  //   }))
-  // }
+  saveScheme = () => {
+    let item = localStorage.colorSchemes
+    if(!item) {
+      item = JSON.stringify([])
+    }
+    let array = JSON.parse(item)
+    this.setState(prevState => ({
+      savedSchemes: [[this.state.imgURL, this.state.scheme], ...array]
+    }), () => {
+      localStorage.colorSchemes = JSON.stringify(this.state.savedSchemes)
+    })
+  }
 
   // POST
   // getIMGScheme = () => {
@@ -62,6 +66,7 @@ class MyState extends Component {
       <Provider value={{
         getURLScheme: this.getURLScheme,
         saveScheme: this.saveScheme,
+        refreshPage: this.refreshPage,
         ...this.state
       }}>
         {this.props.children}

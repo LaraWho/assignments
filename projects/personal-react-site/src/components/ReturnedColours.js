@@ -3,7 +3,6 @@ import { withState } from '../MyState';
 import ColorDetail from './ColorDetail';
 import NavBar from './NavBar';
 
-
 class ReturnedColours extends Component {
   
   render() {
@@ -12,8 +11,7 @@ class ReturnedColours extends Component {
      
       <div className="returned-list" style={{backgroundColor: scheme[1].color}}>
         <img src={imgURL} alt=""/>
-        
-        <ColorDetail />
+        <ColorDetail toShow="return"/>
         <NavBar />
       </div>
 

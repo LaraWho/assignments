@@ -10,6 +10,10 @@ class UploadForm extends Component {
     }
   }
 
+  componentDidMount() {
+    this.props.refreshPage()
+  }
+
   handleChange = (e) => {
     this.setState({
       [e.target.name]: e.target.value

@@ -5,6 +5,7 @@ import RandomColors from './components/RandomColors';
 import { Switch, Route, withRouter  } from 'react-router-dom';
 import { PageFade } from './transitions';
 import './styles.css';
+import SavedList from './components/SavedList';
 
 class App extends Component {
 
@@ -17,6 +18,7 @@ class App extends Component {
             <Route exact path="/" component={UploadForm} />
             <Route path="/api/list" component={Loading} />
             <Route path="/api/random" component={RandomColors} />
+            <Route path="/api/saved" component={SavedList} />
           </Switch>
         </PageFade>
       </div>

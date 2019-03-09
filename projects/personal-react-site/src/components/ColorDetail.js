@@ -3,8 +3,16 @@ import { withState } from '../MyState';
 
 class ColorDetail extends Component {
   render() {
-    let mappedColours = this.props.scheme.map((el, i) => {
-      if(this.props.scheme.length % 2 === 0) {
+   
+    let arrayToMap = [];
+    
+    this.props.toShow === "return" ?
+    arrayToMap = this.props.scheme
+      :
+    arrayToMap = this.props.localSchemes
+    
+    let mappedColours = arrayToMap.map((el, i) => {
+      if(arrayToMap.length % 2 === 0) {
         return <div key={el.label+i} style={{backgroundColor: el.color}} className="color-box">
                 <p>{el.label}</p>
                 <p>{el.color}</p>

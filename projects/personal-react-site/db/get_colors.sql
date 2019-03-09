@@ -1,1 +1,0 @@
-select savedScheme from color_app;

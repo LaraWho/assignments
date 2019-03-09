@@ -6,12 +6,17 @@ import splat from '../assets/mini-splat.svg';
 class NavBar extends Component {
  
   render() {
-    // const { bgColor } = this.props
-    // style={{backgroundColor: bgColor}}
   return (
 
     <div className="nav">
       <Link to="/">home</Link>
+
+      <Link to="/api/saved"
+      style={this.props.inSaved === "none" ? {display: "none"} : null}>see saved</Link>
+    
+      <h2 onClick={this.props.saveScheme}
+      style={this.props.inSaved === "none" ? {display: "none"} : null}>save</h2>
+
       <Link to="/api/random"><img src={splat} alt=""/></Link>
     </div>
     ) 
