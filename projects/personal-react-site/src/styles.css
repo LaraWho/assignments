@@ -1,9 +1,31 @@
 /*  SweetAlert */
-
 .swal2-popup.swal2-toast .swal2-title {
   font-family: 'Paytone One', sans-serif;
   color: #073C5F;
   text-shadow: none;
+}
+
+/*  Scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #748FA0; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #073C5F; 
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(7, 60, 95, 0.555); 
 }
 
 /* Page Fade Transition */
