@@ -103,6 +103,10 @@ h2:hover {
 a {
   text-decoration: none;
 }
+a:active, h2:active {
+  transform: translateY(-5px);
+  opacity: 1;
+}
 
 /* splat image link */
 .nav > a:last-child {

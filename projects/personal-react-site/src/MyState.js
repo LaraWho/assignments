@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import colours from './colours.json';
 let unirest = require('unirest');
 const { Provider, Consumer } = React.createContext()
 

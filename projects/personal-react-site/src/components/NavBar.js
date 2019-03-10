@@ -11,10 +11,10 @@ class NavBar extends Component {
       <Link to="/">home</Link>
 
       <Link to="/api/saved"
-      style={this.props.inSaved === "none" ? {display: "none"} : null}>see saved</Link>
+      style={this.props.inSaved ? {display: "none"} : null}>see saved</Link>
     
       <h2 onClick={this.props.saveScheme}
-      style={this.props.inSaved === "none" ? {display: "none"} : null}>save</h2>
+      style={this.props.inSaved ? {display: "none"} : null}>save</h2>
 
     </div>
     ) 
