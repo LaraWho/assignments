@@ -1,9 +1,6 @@
 /*  SweetAlert */
-.swal2-popup .swal2-styled.swal2-confirm {
-  background-color: #748FA0;
-}
 
-.swal2-popup .swal2-title {
+.swal2-popup.swal2-toast .swal2-title {
   font-family: 'Paytone One', sans-serif;
   color: #073C5F;
   text-shadow: none;
@@ -215,7 +212,6 @@ a:active, h2:active {
 }
 
 .returned-list > img {
-  /* height: 100vh; */
   height: auto;
   width: 100vw;
 }
@@ -302,9 +298,6 @@ button:hover, .upload-form-link:hover {
 
 /* If the array of colours is an odd number, add this styling so the last item spans the width of the page */
 
-/* .color-box:last-child {
-  width: 100%;
-} */
 .two:last-child {
   width: 100%;
 }
@@ -312,7 +305,7 @@ button:hover, .upload-form-link:hover {
 @media (min-width: 580px) {
 
   .upload-form > form {
-    width: 50%;
+    width: 60%;
   }
   
   .colors {
@@ -337,22 +330,12 @@ button:hover, .upload-form-link:hover {
     transform: skew(-10deg, 10deg);
   }
 
-  /* Changing width from 50% when on larger screens */
-  .random-color {
-    width: 200px;
-  }
-
-   /* 7th box of colour */
-  .random-color:last-child {
-    width: 200px;
-  }
-
   .returned-list {
     overflow: hidden;
   }
 
   .returned-list > img {
-    height: 100vh;
+    height: 90vh;
     width: auto;
   }
 
@@ -365,12 +348,18 @@ button:hover, .upload-form-link:hover {
 
 @media (min-width: 750px) {
 
-   /* Changing the position of the text in the 7th box back when desktop */
-   .random-color:last-child {
+  /* Changing width from 50% when on larger screens */
+  .random-color {
+    width: 200px;
+  }
+
+  /* 7th box of colour */
+  /* Changing the position of the text in the 7th box back when desktop */
+  .random-color:last-child {
+    width: 200px;
     align-items: flex-end;
   }
 
-  /* add styling to make image and boxes sit side by side in desktop view */
   
 
 }

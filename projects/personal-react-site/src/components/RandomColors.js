@@ -31,9 +31,9 @@ class RandomColors extends Component {
   return (
     <div className="colors random-colors">
       <div className="nav">
-        <h2 onClick={() => this.props.history.push("/")}>home</h2>
-        <h2 onClick={() => this.props.history.push("/api/saved")}>see saved</h2>
-        <h2 onClick={this.getRandom}>randomise</h2>
+        <h2 style={{color: `#${this.state.colors[0]}`}} onClick={() => this.props.history.push("/")}>home</h2>
+        <h2 style={{color: `#${this.state.colors[1]}`}} onClick={() => this.props.history.push("/api/saved")}>see saved</h2>
+        <h2 style={{color: `#${this.state.colors[2]}`}} onClick={this.getRandom}>randomise</h2>
       </div>
       {mappedRandomColors}
     </div>

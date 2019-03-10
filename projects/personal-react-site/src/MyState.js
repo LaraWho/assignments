@@ -14,10 +14,11 @@ class MyState extends Component {
       loaded: false,
       id: (Math.random() * 8).toString(36).substring(2)
     }
+    
   }
 
   getURLScheme = imgURL => {
-    unirest.get(`https://apicloud-colortag.p.rapidapi.com/tag-url.json?palette=w3c&sort=weight&url=${imgURL}`)
+    unirest.get(`https://apicloud-colortag.p.rapidapi.com/tag-url.json?palette=precise&sort=weight&url=${imgURL}`)
       .header("X-RapidAPI-Key", "e040706029msh326877b81ccb7c7p1dcbe2jsna99dde0f41d5")
       .end((res) => {
         this.setState({
@@ -34,7 +35,15 @@ class MyState extends Component {
     })
   }
 
+
   saveScheme = () => {
+  const Toast = sweetie.mixin({
+    toast: true,
+    position: 'top-right',
+    showConfirmButton: false,
+    timer: 2000
+  });
+
     let item = localStorage.colorSchemes
     if(!item) {
       item = JSON.stringify([])
@@ -45,7 +54,10 @@ class MyState extends Component {
     }), () => {
       localStorage.colorSchemes = JSON.stringify(this.state.savedSchemes)
     })
-    sweetie.fire('woop! saved!')
+    Toast.fire({
+      type: 'success',
+      title: 'saved!'
+    })
   }
       
       render() {
