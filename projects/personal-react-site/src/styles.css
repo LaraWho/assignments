@@ -1,3 +1,14 @@
+/*  SweetAlert */
+.swal2-popup .swal2-styled.swal2-confirm {
+  background-color: #748FA0;
+}
+
+.swal2-popup .swal2-title {
+  font-family: 'Paytone One', sans-serif;
+  color: #073C5F;
+  text-shadow: none;
+}
+
 /* Page Fade Transition */
 .page-fade-appear {
   opacity: 0;
@@ -31,19 +42,14 @@
   height: 100vh;
   width: 100vw;
   background: center no-repeat/cover url('./assets/mini-splat.svg');
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .random-color {
   height: 200px;
-  width: 200px;
+  width: 50%;
   display: flex;
   align-items: flex-end;
-  justify-content: center;
-}
-.random-color:last-child {
-  display: flex;
-  align-items: flex-start;
   justify-content: center;
 }
 
@@ -58,10 +64,19 @@
   letter-spacing: 3px;
 }
 
+  /* 7th box of colour */
+.random-color:last-child {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+}
+
 .random-colors > .nav {
   /* position: fixed; */
   position: absolute;
   bottom: 0;
+  z-index: 5;
 }
 
 .random-colors > .nav > h2 {
@@ -75,7 +90,7 @@
 }
 
 .saved-list-colors > img {
-  width: 100%;
+  height: 100vh;
 }
 
 /* Delete button in SavedList component */
@@ -92,6 +107,7 @@ margin: 0;
 padding: 10px;
 position: fixed;
 left: 5px;
+z-index: 5;
 }
 
 /* Navbar component */
@@ -141,7 +157,7 @@ a:active, h2:active {
   right: 10%;
   top: 3%;
   cursor: pointer;
-  transition: all 1s ease-in-out;
+  transition: all 2s ease-in-out;
 }
 
 .upload-form > img:hover {
@@ -199,14 +215,10 @@ a:active, h2:active {
 }
 
 .returned-list > img {
-  width: 100%;
+  /* height: 100vh; */
+  height: auto;
+  width: 100vw;
 }
-/* 
-.returned-list > button {
-  width: 100%;
-  margin: 0;
-  border-radius: 0;
-} */
 
 /* UploadForm.js */
 .upload-form {
@@ -246,7 +258,7 @@ a:active, h2:active {
   z-index: 1;
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 90%;
   transition: all 1s ease-in-out;
 }
 
@@ -297,8 +309,12 @@ button:hover, .upload-form-link:hover {
   width: 100%;
 }
 
-@media (min-width: 570px) {
+@media (min-width: 580px) {
 
+  .upload-form > form {
+    width: 50%;
+  }
+  
   .colors {
     width: 100%;
   }
@@ -321,17 +337,37 @@ button:hover, .upload-form-link:hover {
     transform: skew(-10deg, 10deg);
   }
 
+  /* Changing width from 50% when on larger screens */
+  .random-color {
+    width: 200px;
+  }
+
+   /* 7th box of colour */
+  .random-color:last-child {
+    width: 200px;
+  }
+
   .returned-list {
     overflow: hidden;
+  }
+
+  .returned-list > img {
+    height: 100vh;
+    width: auto;
+  }
+
+  /* Changing the position of the text in the 7th box when larger than mobile */
+  .random-color:last-child {
+    align-items: flex-start;
   }
 
 }
 
 @media (min-width: 750px) {
 
-  .returned-list > img {
-    height: 100vh;
-    width: auto;
+   /* Changing the position of the text in the 7th box back when desktop */
+   .random-color:last-child {
+    align-items: flex-end;
   }
 
   /* add styling to make image and boxes sit side by side in desktop view */

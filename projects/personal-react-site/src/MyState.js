@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import sweetie from 'sweetalert2';
 let unirest = require('unirest');
 const { Provider, Consumer } = React.createContext()
 
@@ -44,6 +45,7 @@ class MyState extends Component {
     }), () => {
       localStorage.colorSchemes = JSON.stringify(this.state.savedSchemes)
     })
+    sweetie.fire('woop! saved!')
   }
       
       render() {

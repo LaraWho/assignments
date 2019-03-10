@@ -21,7 +21,7 @@ class SavedList extends Component {
     // '#748FA0'
     let mappedArray = array.map((el,i) => {
       lastItem = array[array.length - 1][1][1].color
-      return <div key={i} style={{backgroundColor: el[1][1].color}} className="saved-list-colors">
+      return <div key={i} style={{backgroundColor: el[1][1].color}} className="returned-list saved-list-colors">
       <h2 onClick={() => this.deleteScheme(el[2], array)}>delete</h2>
                 <img src={el[0]} alt=""/> 
                 <ColorDetail toShow="saved" localSchemes={el[1]}/> 
@@ -29,7 +29,7 @@ class SavedList extends Component {
       })
     
     return (
-      <div className="returned-list" style={{backgroundColor: lastItem}} >
+      <div style={{backgroundColor: lastItem}} >
         {array.length === 0 ?
         <div className="saved-list-form">
           <UploadForm history={this.props.history}/>
