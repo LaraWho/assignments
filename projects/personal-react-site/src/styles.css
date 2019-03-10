@@ -49,17 +49,39 @@
   letter-spacing: 3px;
 }
 
+.random-colors > .nav > h2 {
+  color: #073C5F;
+  text-shadow: none;
+}
+
+/* SavedList component styling */
+.saved-list-form {
+  width: 100vw;
+}
+
+.saved-list-colors > img {
+  width: 100%;
+}
+
+.saved-list-colors > h2 {
+  margin: 0;
+  padding: 10px;
+  position: absolute;
+  right: 5px;
+}
+
 /* Navbar component */
 .nav {
   height: 80px;
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 }
 
 .nav > a, h2 {
   cursor: pointer;
+  opacity: 0.9;
   color: #EDEDED;
   text-shadow: 1px 1px 1px #073C5F, -1px -1px 1px #073C5F;
   font-weight: bold;
@@ -69,12 +91,12 @@
 }
 
 .nav > a:hover {
-  color: #073C5F;
+  opacity: 0.6;  
   text-shadow: none;
 }
 
-.nav > h2:hover {
-  color: #073C5F;
+h2:hover {
+  opacity: 0.6;  
   text-shadow: none;
 }
 

@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import { withState } from '../MyState';
-import splat from '../assets/mini-splat.svg';
 
 class NavBar extends Component {
 
@@ -17,7 +16,6 @@ class NavBar extends Component {
       <h2 onClick={this.props.saveScheme}
       style={this.props.inSaved === "none" ? {display: "none"} : null}>save</h2>
 
-      <Link to="/api/random"><img src={splat} alt=""/></Link>
     </div>
     ) 
   }

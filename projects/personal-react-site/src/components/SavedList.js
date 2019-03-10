@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { withState } from '../MyState';
 import ColorDetail from './ColorDetail';
 import NavBar from './NavBar';
+import UploadForm from './UploadForm';
 
 class SavedList extends Component {
 
@@ -16,33 +17,30 @@ class SavedList extends Component {
   render() {
     let item = localStorage.colorSchemes
     let array = JSON.parse(item)
-    let lastItem = '' 
-    let mappedArray = []
-
-    if(array === "null") {
-      lastItem = '#333'
-    } else {
-     mappedArray = array.map((el,i) => {
+    let lastItem;
+    // '#748FA0'
+    let mappedArray = array.map((el,i) => {
       lastItem = array[array.length - 1][1][1].color
-      return <div key={i} style={{backgroundColor: el[1][1].color}} >
-      <button onClick={() => this.deleteScheme(el[2], array)}>delete</button>
+      return <div key={i} style={{backgroundColor: el[1][1].color}} className="saved-list-colors">
+      <h2 onClick={() => this.deleteScheme(el[2], array)}>delete</h2>
                 <img src={el[0]} alt=""/> 
                 <ColorDetail toShow="saved" localSchemes={el[1]}/> 
               </div> 
       })
-    }
-console.log(lastItem)
+    
     return (
       <div className="returned-list" style={{backgroundColor: lastItem}} >
-        {array === "null" ?
-       <img src='https://all4desktop.com/data_images/original/4235049-images-of-love.jpg'/>
-      :
+        {array.length === 0 ?
+        <div className="saved-list-form">
+          <UploadForm history={this.props.history}/>
+        </div>
+        :
       <div>
         {mappedArray}
+        <NavBar inSaved="true"/>
       </div>
       
       }
-        <NavBar inSaved="true"/>
       </div>
     );
   }

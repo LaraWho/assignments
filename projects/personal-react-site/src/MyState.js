@@ -15,7 +15,6 @@ class MyState extends Component {
       id: (Math.random() * 8).toString(36).substring(2)
     }
   }
-  // https://all4desktop.com/data_images/original/4235049-images-of-love.jpg
 
   getURLScheme = imgURL => {
     unirest.get(`https://apicloud-colortag.p.rapidapi.com/tag-url.json?palette=w3c&sort=weight&url=${imgURL}`)
@@ -47,19 +46,6 @@ class MyState extends Component {
       localStorage.colorSchemes = JSON.stringify(this.state.savedSchemes)
     })
   }
-
-  // POST
-  // getIMGScheme = () => {
-    //   unirest.post("https://apicloud-colortag.p.rapidapi.com/tag-file.json")
-    //     .header("X-RapidAPI-Key", "e040706029msh326877b81ccb7c7p1dcbe2jsna99dde0f41d5")
-    //     .header("Content-Type", "application/x-www-form-urlencoded")
-    //     .send("palette=w3c")
-    //     .send("sort=weight")
-    //     .end((res) => {
-      //     console.log(res.body);
-      // });
-      // }
-      
       
       render() {
         return (
