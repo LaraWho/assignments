@@ -35,7 +35,8 @@ class SavedList extends Component {
           <UploadForm history={this.props.history}/>
         </div>
         :
-      <div>
+      <div className="saved-list">
+        <h2 onClick={() => this.props.history.push('/')}>home</h2>
         {mappedArray}
         <NavBar inSaved="true"/>
       </div>

@@ -16,9 +16,9 @@ class App extends Component {
         <PageFade location={location}>
           <Switch location={location}>
             <Route exact path="/" component={UploadForm} />
-            <Route path="/api/list" component={Loading} />
-            <Route path="/api/random" component={RandomColors} />
-            <Route path="/api/saved" component={SavedList} />
+            <Route exact path="/api/list" component={Loading} />
+            <Route exact path="/api/random" component={RandomColors} />
+            <Route exact path="/api/saved" component={SavedList} />
           </Switch>
         </PageFade>
       </div>
