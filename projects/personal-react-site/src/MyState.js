@@ -16,7 +16,7 @@ class MyState extends Component {
     }
     
   }
-
+  // this.state.loaded is initially false so when a user is waiting for the response they see the loading screen. When we get the response from the api and the array in state is populated 'loaded' is also set to true and the user is redirected to the component which displays this information
   getURLScheme = imgURL => {
     unirest.get(`https://apicloud-colortag.p.rapidapi.com/tag-url.json?palette=precise&sort=weight&url=${imgURL}`)
       .header("X-RapidAPI-Key", "e040706029msh326877b81ccb7c7p1dcbe2jsna99dde0f41d5")
@@ -28,13 +28,13 @@ class MyState extends Component {
         })
       });
   }
-
+  
+  // To reset state when the user visits the homepage from inside the app
   refreshPage = () => {
     this.setState({
       loaded: false
     })
   }
-
 
   saveScheme = () => {
   const Toast = sweetie.mixin({
@@ -43,7 +43,7 @@ class MyState extends Component {
     showConfirmButton: false,
     timer: 2000
   });
-
+    // Get the saved items from local storage
     let item = localStorage.colorSchemes
     if(!item) {
       item = JSON.stringify([])

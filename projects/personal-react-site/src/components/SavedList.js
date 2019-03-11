@@ -27,19 +27,23 @@ class SavedList extends Component {
   }
 
   render() {
+    // Get the items from local storage and save the parsed version to an array which we can map over to display
     let item = localStorage.colorSchemes
     let array = JSON.parse(item)
+    // Declaring variable to be used inside the map to colour the containing div
     let lastItem;
-    let mappedArray = array.map((el,i) => {
+    let mappedArray = array.map((scheme) => {
       lastItem = array[array.length - 1][1][1].color
-      return <div key={i} style={{backgroundColor: el[1][1].color}} className="returned-list saved-list-colors">
-      <h2 onClick={() => this.deleteScheme(el[2], array)}>delete</h2>
-                <img src={el[0]} alt=""/> 
-                <ColorDetail toShow="saved" localSchemes={el[1]}/> 
+      return <div key={scheme[2]} style={{backgroundColor: scheme[1][1].color}} className="returned-list saved-list-colors">
+      <h2 onClick={() => this.deleteScheme(scheme[2], array)}>delete</h2>
+                <img src={scheme[0]} alt=""/> 
+                <ColorDetail toShow="saved" localSchemes={scheme[1]}/> 
               </div> 
       })
     
     return (
+
+      // If there are no saved items in local storage then display the form component to upload an image
       <div style={{backgroundColor: lastItem}} >
         {array.length === 0 ?
         <div className="saved-list-form">

@@ -11,6 +11,7 @@ class ReturnedColours extends Component {
      
       <div className="returned-list" style={{backgroundColor: scheme[1].color}}>
         <img src={imgURL} alt=""/>
+        {/* ColorDetail displays the colours. It's being used in two components and am mapping over different arrays in both. Here I'm passing a prop to this instance so I can use it to conditionally render information */}
         <ColorDetail toShow="return"/>
         <NavBar />
       </div>

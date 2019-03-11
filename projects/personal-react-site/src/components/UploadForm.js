@@ -11,6 +11,7 @@ class UploadForm extends Component {
     }
   }
 
+  // Immediately run the function in MyState.js which sets the item 'loaded' in state to be false so an image can be uploaded
   componentDidMount() {
     this.props.refreshPage()
   }
@@ -27,6 +28,7 @@ class UploadForm extends Component {
     this.redirectUser()
   }
 
+  // Using the boolean in MyState to redirect the user to the correct page after the api call returns the information
   redirectUser = () => {
     return !this.props.loaded ? this.props.history.push("/api/list") : null
   }

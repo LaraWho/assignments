@@ -5,22 +5,24 @@ class ColorDetail extends Component {
   render() {
    
     let arrayToMap = [];
+    // 'arrayToMap' will hold either an array taken from local storage to display your saved list of colours, or the array from state when you see the colours from your uploaded image
     
     this.props.toShow === "return" ?
     arrayToMap = this.props.scheme
       :
     arrayToMap = this.props.localSchemes
     
-    let mappedColours = arrayToMap.map((el, i) => {
+    let mappedColours = arrayToMap.map((color, i) => {
+      // Applying a different class name if there are an odd number of colours, so I can apply a 100% width to the last element.
       if(arrayToMap.length % 2 === 0) {
-        return <div key={el.label+i} style={{backgroundColor: el.color}} className="color-box">
-                <p>{el.label}</p>
-                <p>{el.color}</p>
+        return <div key={color.label+i} style={{backgroundColor: color.color}} className="color-box">
+                <p>{color.label}</p>
+                <p>{color.color}</p>
               </div>
       } else {
-        return <div key={el.label+i} style={{backgroundColor: el.color}} className="color-box two">
-                <p>{el.label}</p>
-                <p>{el.color}</p>
+        return <div key={color.label+i} style={{backgroundColor: color.color}} className="color-box two">
+                <p>{color.label}</p>
+                <p>{color.color}</p>
               </div>
       }
     })

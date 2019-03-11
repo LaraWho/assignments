@@ -6,19 +6,19 @@
 }
 
 /*  Scrollbar */
-/* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 15px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #748FA0; 
+  background-color: rgba(116, 143, 160, 0.5); 
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #073C5F; 
+  background: rgba(7, 60, 95, 0.8); 
   border-radius: 20px;
   cursor: pointer;
 }
@@ -60,7 +60,6 @@
 .random-colors {
   height: 100vh;
   width: 100vw;
-  background: center no-repeat/cover url('./assets/mini-splat.svg');
   /* overflow: hidden; */
 }
 
@@ -173,10 +172,10 @@ a:active, h2:active {
   position: absolute;
   z-index: 0;
   width: 30%;
-  right: 10%;
-  top: 3%;
+  right: 8%;
+  top: 5%;
   cursor: pointer;
-  transition: all 2s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 .upload-form > img:hover {
@@ -352,6 +351,7 @@ button:hover, .upload-form-link:hover {
     transform: skew(-10deg, 10deg);
   }
 
+  /* The image in the ReturnedList component */
   .returned-list {
     overflow: hidden;
   }
@@ -371,17 +371,13 @@ button:hover, .upload-form-link:hover {
 @media (min-width: 750px) {
 
   /* Changing width from 50% when on larger screens */
-  .random-color {
+  /* .random-color {
     width: 200px;
-  }
+  } */
 
-  /* 7th box of colour */
   /* Changing the position of the text in the 7th box back when desktop */
-  .random-color:last-child {
-    width: 200px;
-    align-items: flex-end;
-  }
-
-  
-
+  /* .random-color:last-child { */
+    /* width: 200px; */
+    /* align-items: flex-end; */
+  /* } */
 }

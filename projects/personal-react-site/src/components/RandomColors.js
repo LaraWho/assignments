@@ -9,6 +9,7 @@ class RandomColors extends Component {
     }
   }
 
+  // Invoke the api call immediately so the boxes have colours to display
   componentDidMount() {
     this.getRandom()
   }
@@ -22,6 +23,7 @@ class RandomColors extends Component {
   }
 
   render() {
+    // Map over the colours we saved to state above, if there is an empty string then add a colour so we don't have an empty box
     let mappedRandomColors = this.state.colors.map((color, i) => {
       return  <div className="random-color" key={color+i} style={{backgroundColor: !color ? '#748FA0' : `#${color}`}}>
                 <p>{!color ? '#748FA0' : `#${color}`}</p>
