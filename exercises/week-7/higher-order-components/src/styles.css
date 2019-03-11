@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.fa-star {
+  cursor: pointer;
+  font-size: 50px;
+  color: white;
+}
+
+h1 {
+  cursor: pointer;
+}
