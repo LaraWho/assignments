@@ -32,9 +32,9 @@ class SavedList extends Component {
     let array = JSON.parse(item)
     // Declaring variable to be used inside the map to colour the containing div
     let lastItem;
-    let mappedArray = array.map((scheme) => {
+    let mappedArray = array.map((scheme, i) => {
       lastItem = array[array.length - 1][1][1].color
-      return <div key={scheme[2]} style={{backgroundColor: scheme[1][1].color}} className="returned-list saved-list-colors">
+      return <div key={scheme[2]+i} style={{backgroundColor: scheme[1][1].color}} className="returned-list saved-list-colors">
       <h2 onClick={() => this.deleteScheme(scheme[2], array)}>delete</h2>
                 <img src={scheme[0]} alt=""/> 
                 <ColorDetail toShow="saved" localSchemes={scheme[1]}/> 
