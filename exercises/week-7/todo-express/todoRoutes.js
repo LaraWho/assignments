@@ -1,20 +1,43 @@
 const express = require('express')
 const todoRoutes = express.Router()
-const data = require('./todos')
-const uuid = require('uuid')
+// const data = require('./todos')
+// const uuid = require('uuid')
+const Todo = require('./todo')
 
 todoRoutes.route('/')
 
+      // .get((req, res) => {
+      //   res.send(data)
+      // })
+
       .get((req, res) => {
-        res.send(data)
+        Todo.find((err, todo) => {
+          if(err) {
+            return res.status(500).send(err)
+          } else {
+            return res.status(200).send(todo)
+          }
+        })
       })
+
+      // .post((req, res) => {
+      //   if(Object.keys(req.body).length !== 0) {
+      //     const newObj = req.body
+      //     newObj._id = uuid.v4()
+      //     data.push(newObj)
+      //     res.send(newObj)
+      //   } else {
+      //     res.send("Can't create that!")
+      //   }
+      // })
 
       .post((req, res) => {
         if(Object.keys(req.body).length !== 0) {
-          const newObj = req.body
-          newObj._id = uuid.v4()
-          data.push(newObj)
-          res.send(newObj)
+          const newObj = new Todo(req.body)
+          newObj.save(err => {
+            if(err) return res.status(500).send(err)
+            return res.status(200).send(newObj)
+          })
         } else {
           res.send("Can't create that!")
         }
