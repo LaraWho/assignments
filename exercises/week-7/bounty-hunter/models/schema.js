@@ -12,7 +12,7 @@ const BountySchema = new Schema({
   type: String,
   image: {
     type: String,
-    default: ''
+    default: 'https://hips.hearstapps.com/digitalspyuk.cdnds.net/17/40/1506940543-piers-morgan-gmb.jpg'
   }
 })
 
