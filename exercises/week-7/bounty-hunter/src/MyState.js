@@ -7,10 +7,7 @@ class myState extends Component {
     super()
     this.state = {
       bounties: [],
-      firstName: '',
-      lastName: '',
-      price: 0,
-      type: ''    
+      canEdit: false
     }
   }
 
@@ -19,12 +16,13 @@ class myState extends Component {
       this.setState({
         bounties: res.data
       })
+    }).catch(err => {
+      console.log(err)
     })
   }
 
   addBounty = (bounty) => {
     axios.post('/api/bounties', bounty).then(res => {
-      console.log(res.data)
       this.setState(prevState => ({
         bounties: [res.data, ...prevState.bounties]
       }))
@@ -32,11 +30,35 @@ class myState extends Component {
       console.log(err)
     })
   }
- 
+
+  killBounty = (id) => {
+    axios.delete(`/api/bounties/${id}`).then(res => {
+      console.log(res.data)
+      this.getBounties()
+    }).catch(err => {
+      console.log(err)
+    })
+  }
+
+  editBounty = (id, bounty) => {
+    console.log(id, bounty)
+    axios.put(`/api/bounties/${id}`, bounty).then(res => {
+      console.log(res.data)
+      this.setState(prevState => ({
+        bounties: [res.data, ...prevState.bounties],
+        canEdit: !prevState.canEdit
+      }))
+    }).catch(err => {
+      console.log(err)
+    })
+  }
+
   render() {
     const props = {
       getBounties: this.getBounties,
       addBounty: this.addBounty,
+      editBounty: this.editBounty,
+      killBounty: this.killBounty,
       ...this.state
     }
     return (

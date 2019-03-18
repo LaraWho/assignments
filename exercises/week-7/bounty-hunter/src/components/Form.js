@@ -17,6 +17,7 @@ class Form extends Component {
       [e.target.name]: e.target.value
     })
   }
+
   handleSubmit = (e) => {
     e.preventDefault()
     this.props.addBounty(this.state)
@@ -31,13 +32,13 @@ class Form extends Component {
   render() {
     const { firstName, lastName, price, type } = this.state
     return (
-      <form onSubmit={this.handleSubmit}>
-        <input type="text" name="firstName" value={firstName} onChange={this.handleChange}/>
-        <input type="text" name="lastName" value={lastName} onChange={this.handleChange}/>
-        <input type="text" name="price" value={price} onChange={this.handleChange}/>
-        <input type="text" name="type" value={type} onChange={this.handleChange}/>
-        <button>add</button>
-      </form>
+        <form onSubmit={this.handleSubmit}>
+          <input type="text" name="firstName" value={firstName} onChange={this.handleChange} required/>
+          <input type="text" name="lastName" value={lastName} onChange={this.handleChange} required/>
+          <input type="text" name="price" value={price} onChange={this.handleChange}/>
+          <input type="text" name="type" value={type} onChange={this.handleChange}/>
+          <button>add</button>
+        </form>
     );
   }
 }

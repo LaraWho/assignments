@@ -50,7 +50,7 @@ bountyRoutes.route('/')
         {_id: req.params.id},
         (err) => {
           if(err) return res.status(500).send(err)
-          return res.status(200).send("deleted!")
+          return res.status(200).send('deleted!')
         })
     })
 

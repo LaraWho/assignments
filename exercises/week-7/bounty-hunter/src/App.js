@@ -13,7 +13,7 @@ class App extends Component {
 
   render() {
     let mappedBounties = this.props.bounties.map(bounty => (
-     <Bounty key={bounty._id} bounty={bounty} />
+      <Bounty key={bounty._id} bounty={bounty} />
     ))
     return (
       <div>
