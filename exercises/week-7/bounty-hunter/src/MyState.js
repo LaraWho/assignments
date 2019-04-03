@@ -40,7 +40,14 @@ class myState extends Component {
     })
   }
 
-  editBounty = (id, bounty) => {
+  editBounty = (id) => {
+    console.log('edit function:', id)
+      this.setState(prevState => ({
+        canEdit: !prevState.canEdit
+      }))
+  }
+
+  saveBounty = (id, bounty) => {
     console.log(id, bounty)
     axios.put(`/api/bounties/${id}`, bounty).then(res => {
       console.log(res.data)
@@ -58,6 +65,7 @@ class myState extends Component {
       getBounties: this.getBounties,
       addBounty: this.addBounty,
       editBounty: this.editBounty,
+      saveBounty: this.saveBounty,
       killBounty: this.killBounty,
       ...this.state
     }

@@ -1,6 +1,6 @@
 const express = require('express')
 const inventoryRoutes = express.Router()
-const inventoryItems = require('./items')
+const inventoryItems = require('../../items')
 
 inventoryRoutes.route('/')
 

@@ -3,7 +3,7 @@ import { withState } from '../MyState';
 
 class ColorDetail extends Component {
   render() { 
-   
+  
     let arrayToMap = [];
     // 'arrayToMap' will hold either an array taken from local storage to display your saved list of colours, or the array from state when you see the colours from your uploaded image
     

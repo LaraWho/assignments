@@ -15,7 +15,7 @@ class SavedList extends Component {
       timer: 2000
     });
 
-     let newArray = array.filter((el) => {
+    let newArray = array.filter((el) => {
         return el[2] !== id
       })
       localStorage.colorSchemes = JSON.stringify(newArray)

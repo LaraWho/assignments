@@ -5,7 +5,7 @@ import './loading.css';
 
 class Loading extends Component {
   render() {
-   
+  
   return (
     <div>
 
@@ -45,7 +45,7 @@ class Loading extends Component {
     </div>
 
   );
-   
+  
 }
 };
 

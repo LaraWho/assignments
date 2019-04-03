@@ -18,7 +18,7 @@ class Form extends Component {
     })
   }
 
-  handleSubmit = (e) => {
+  handlePost = (e) => {
     e.preventDefault()
     this.props.addBounty(this.state)
     this.setState({
@@ -29,16 +29,37 @@ class Form extends Component {
     })
   }
 
+  handleSave = (e) => {
+    e.preventDefault()
+    this.props.saveBounty(this.props.bounty._id, this.state)
+  }
+
   render() {
     const { firstName, lastName, price, type } = this.state
+    const { image, _id } = this.props.bounty
     return (
-        <form onSubmit={this.handleSubmit}>
+      <div>
+
+      {this.props.type === "edit" ?
+        <form onSubmit={this.handleSave}>
+          <input type="text" name="firstName" value={firstName} onChange={this.handleChange} />
+          <input type="text" name="lastName" value={lastName} onChange={this.handleChange} />
+          <img src={image} alt={firstName}/>
+          <input type="text" name="price" value={price} onChange={this.handleChange}/>
+          <input type="text" name="type" value={type} onChange={this.handleChange}/>
+          <button>save</button>
+        </form>
+      :
+        <form onSubmit={this.handlePost}>
           <input type="text" name="firstName" value={firstName} onChange={this.handleChange} required/>
           <input type="text" name="lastName" value={lastName} onChange={this.handleChange} required/>
           <input type="text" name="price" value={price} onChange={this.handleChange}/>
           <input type="text" name="type" value={type} onChange={this.handleChange}/>
           <button>add</button>
         </form>
+      }
+      </div>
+
     );
   }
 }
